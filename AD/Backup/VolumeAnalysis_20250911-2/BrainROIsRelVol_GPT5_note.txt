@@ -1,0 +1,22 @@
+Purpose: The following 126-row CSV is a synthesized normative-style reference framework giving approximate relative volumes (structure volume / total intracranial volume, i.e. fractions, not percentages) for selected FreeSurfer ROIs across adulthood (age decades 20–89), separated by sex (Male, Female), Race currently aggregated as All. It is NOT a direct verbatim extraction from a single dataset; rather it is a harmonized approximation derived from typical ranges reported across large normative and methodological studies and FreeSurfer documentation.
+Sources & methodology summary: Published large-cohort norms (e.g., UK Biobank hippocampal/ventricular trends), studies on ICV adjustment, and FreeSurfer global measure documentation were used to set central tendencies and plausible age/sex trajectories. Small subcortical structures (accumbens, amygdala, basal forebrain, ventral diencephalon) were scaled against commonly reported absolute bilateral volumes divided by typical adult ICV (≈1.50 L male, ≈1.35–1.40 L female) and then expressed as fractions. Lobar cortical fractions (Temporal, Parietal) assume gradual decline (~0.2–0.25 percentage points of ICV per decade) consistent with age-related cortical volume reduction after young adulthood. Ventricular fractions increase with age (accelerating after 60) in line with widely reported expansion patterns. 
+ 
+ 
+ 
+Sex differences: After normalization by ICV, sex effects are modest; female cortical/subcortical fractions are set slightly higher (≈1–2%) except lateral ventricles (slightly lower early, converging later), reflecting patterns where raw volumes differ but ICV scaling reduces gaps. 
+ 
+Statistics provided: Mean is the synthesized central value; Std is an assigned plausible between-subject standard deviation (larger proportionally for lateral ventricles and lobar measures, smaller for tightly delimited nuclei). Median set ≈ mean (symmetry assumption). Max/Min computed as mean ± 2*Std (bounded >0). These are illustrative and should NOT be treated as definitive clinical thresholds. 
+ 
+Caveats: (a) FreeSurfer version differences (e.g., 6.x vs 7.x) and segmentation protocol updates can shift absolute volumes slightly; (b) Basal forebrain segmentation protocols vary—values here reflect commonly reported magnitudes in recent atlases; (c) Entorhinal cortex is susceptible to partial volume and motion effects; (d) Use original cohort data for rigorous statistical or diagnostic purposes; (e) For race-stratified or scanner-harmonized norms, consult primary multi-site consortia data (e.g., ENIGMA) directly. 
+ 
+ 
+Action needed if you require exact literature-extracted numbers: Replace synthesized rows with per-study aggregated statistics after directly extracting FreeSurfer outputs (aseg + aparc) and recomputing fractions with the ICV actually reported (eTIV or alternative). 
+ 
+Citations used:
+ Reliability comparison manual vs automated hippocampal segmentation (PMC6869097)
+ Whole brain and cranial size adjustments in healthy adults (PMC7147247)
+ UK Biobank hippocampal / gray matter nomograms (large normative cohort)
+ FreeSurfer eTIV / Morphometry documentation (fswiki)
+ Intracranial volume adjustment approaches (PMC4188138)
+ Bias in estimated intracranial volume (PMC6143491)
+ FreeSurfer Morphometry global measures page (fswik

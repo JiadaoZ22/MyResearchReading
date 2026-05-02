@@ -1,0 +1,5 @@
+Data Origin: These values are synthesized from multiple studies and should be considered approximate for illustrative or modeling purposes. For precise scientific applications, consult primary sources directly, as exact normative data can vary by FreeSurfer version (e.g., 5.3 or 7.0), population demographics, and MRI protocols. 
+Missing Data: "NaN" is used where reliable, consistent data for specific metrics, age ranges, or sexes was not sufficiently detailed or available in the reviewed literature. Max and min values are often sparse and thus marked as NaN. 
+ROI Definitions: ROIs follow standard FreeSurfer segmentation (primarily versions 5.3-7.0). "Temporal Lobes" and "Parietal Lobes" are aggregate cortical volumes; others are subcortical or specific cortical regions. 
+Age and Sex Trends: Data reflects observed trends like gradual volume decrease in structures like the Hippocampus and Amygdala with age, and slight sex differences post-eTIV normalization (e.g., females often showing marginally higher relative volumes in some cortical areas). 
+Race: Set to "All" due to limited race-specific data in most publications; studies often pool mixed ancestries.

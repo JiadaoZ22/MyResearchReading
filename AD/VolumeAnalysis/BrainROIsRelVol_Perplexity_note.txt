@@ -1,0 +1,10 @@
+The requested normative data on relative volumes of core brain ROIs normalized to total intracranial volume (ICV) for a normal population is not directly available in a single open publication or database with the full detailed breakdown by age, sex, and ROI as specified. However, based on synthesis of multiple open neuroimaging resources and FreeSurfer documentation:
+
+FreeSurfer (preferably version 7.0) is the standard tool for automated segmentation of the listed ROIs including hippocampus, entorhinal cortex, temporal and parietal lobes, amygdala, basal forebrain, accumbens, ventral diencephalon (Ventral DC), and lateral ventricles
+.
+Relative volume fractions to ICV for these ROIs typically fall within known ranges documented in various normative MRI studies, e.g., hippocampus ~0.0035-0.0045, amygdala ~0.0015-0.0020, lateral ventricles ~0.01-0.02, etc., with gradual age-related decline or enlargement depending on the structure
+.
+Sex differences exist but relative volumes normalized to ICV reduce these differences.
+Age groups are typically segmented in decades from 20-29 upwards, but exact normative statistics (mean, std, median, max, min) per ROI, sex, and age group are not fully compiled in open literature in a single source.
+Basal forebrain and ventral diencephalon volumes are less commonly reported separately but can be approximated from FreeSurfer segmentations.
+The table below is a constructed example based on typical normative values from multiple sources, suitable for reference and modeling, labeled with "Perplexity" as requested.

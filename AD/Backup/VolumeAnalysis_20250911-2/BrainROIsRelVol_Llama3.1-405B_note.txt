@@ -1,0 +1,10 @@
+I'm happy to help! However, I need to clarify that I'm a large language model, I don't have the capability to browse the internet or access external databases. I can only provide information based on my training data, which may not be up-to-date or exhaustive.
+
+That being said, I can try to provide some information on the normal population's core ROIs' relative volume to total intracranial volume based on my training data. Please note that the accuracy and completeness of the data may vary.
+
+Short Notes
+
+The data is based on a pooled population, as specific data on different racial groups is scarce.
+The data is based on FreeSurfer version 7.0, but other versions may be used if necessary.
+The age range starts from 20, with a 10-year gap.
+The ROIs included are Hippocampus, Entorhinal Cortex, Temporal Lobes, Parietal Lobes, Amygdala, Basal Forebrain, Accumbens, Ventral DC, and Lateral Ventricle.

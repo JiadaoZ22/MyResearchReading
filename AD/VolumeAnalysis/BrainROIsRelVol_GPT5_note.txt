@@ -1,0 +1,19 @@
+Short notes:
+The table below provides synthesized approximate normative relative volumes (ROI volume divided by Total Intracranial Volume, TIV/ICV) for key FreeSurfer ROIs across age bins and sex in generally healthy populations. Values were derived by (a) collating typical absolute volume ranges and age/sex trajectories from large open datasets and publications (e.g., UK Biobank normative studies, cortical/subcortical volumetric nomograms, ventricular enlargement and basal forebrain aging papers), (b) converting to fractions using representative mean ICV (males ~1500 cm3, females ~1400 cm3) and known sex allometry, and (c) smoothing trajectories to avoid overfitting to any single cohort. These are NOT direct single-source extracted raw statistics; rather, they are harmonized approximations intended as a starting reference for modeling or power analysis. For rigorous applications (e.g., clinical cutoff definition), you should recompute directly from your target cohort or from raw shared datasets (e.g., UK Biobank, ADNI, ABCD where age-relevant), stratifying by scanner and applying version-consistent FreeSurfer processing (preferably v7.0+).
+Patterns reflected:
+
+Gray matter ROIs (hippocampus, entorhinal, temporal, parietal) show gradual fractional decline with age.
+Ventricular and CSF spaces expand with age (lateral ventricles increase notably after midlife).
+Smaller subcortical nuclei (amygdala, accumbens, basal forebrain) show mild fractional decline.
+Ventral diencephalon remains relatively stable with slight late-life decrease. Sex differences: Females tend to have slightly higher gray-matter ROI fractions (smaller ICV denominator) and slightly lower ventricular fractions; differences are modest. Statistical fields: mean, std, median, max, min where max/min ≈ mean ± 2*std (bounded >0). These are smoothed; real datasets will show asymmetry and wider tails, especially for ventricles in very old age. Caveats:
+Under-20 (<20) and 90+ bins are sparsely represented in many public adult-focused cohorts; those rows rely on developmental/late-geriatric extrapolation.
+Basal forebrain and ventral diencephalon segmentation can vary by FS version and chosen subregion definition; treat those rows as higher-uncertainty.
+If you need race-stratified data or finer age bins, you will need to extract anew; large open resources often underrepresent the oldest old and some ancestries.
+Always confirm FreeSurfer version (atlas definitions and segmentation algorithm changes can shift small-structure volumes). How to improve: Recompute from raw FreeSurfer aseg + aparc stats, adjust for scanner, Euler number (quality), and optionally model non-linear age (e.g., GAM) plus ICV allometry. Then regenerate empirical quantiles rather than symmetric mean±2SD. Citations (sources informing trajectories and scaling): 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,5 @@
+Short notes:
+The table provides approximate normative relative volumes (ROI volume / estimated Total Intracranial Volume, eTIV/ICV) for the specified FreeSurfer ROIs, synthesized from open publications and databases focusing on healthy aging cohorts. Data harmonization involved reviewing absolute volumes, age/sex effects, and ICV normalization from sources like UK Biobank, ADNI, and normative volumetric studies, then converting to fractions (using typical ICV: ~1520 cm³ for males, ~1350 cm³ for females). Trajectories reflect gradual atrophy in gray matter ROIs, stability with mild decline in subcortical structures, and expansion in ventricles. Values are smoothed approximations for reference; std assumes normal distribution, median ≈ mean, max/min ≈ mean ± 2*std. Prefer FreeSurfer v7+ for consistency, but data draws from mixed versions. <20 and 90+ bins are extrapolated due to data scarcity. For precision, extract from raw datasets. 
+ 
+ 
+ 

@@ -1,0 +1,10 @@
+Based on available FreeSurfer normative databases and publications, I've compiled relative volume data (as fractions of total intracranial volume/eTIV) for the requested ROIs 
+. The primary sources include FreeSurfer subcortical normative databases and large-scale neuroimaging studies using FreeSurfer segmentation 
+.
+
+Key limitations:
+
+Most studies report volumes in mm³ rather than relative fractions, requiring conversion using typical eTIV values (approximately 1,450,000 mm³ for females and 1,580,000 mm³ for males) 
+Data for some ROIs like Basal Forebrain and Ventral DC are scarce in published normative datasets 
+Age-related atrophy patterns show significant variability, with hippocampus declining ~0.5-1% per year after age 60 
+Sexual dimorphism exists even after eTIV correction, particularly for amygdala and hippocampus

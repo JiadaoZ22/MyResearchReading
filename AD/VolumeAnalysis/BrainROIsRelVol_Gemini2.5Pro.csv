@@ -1,0 +1,163 @@
+Model,Race,Sex,Age,ROI,RelativeVolume_mean,RelativeVolume_std,RelativeVolume_median,RelativeVolume_max,RelativeVolume_min
+Gemini-2.5-Pro,All,Male,<20,Hippocampus,0.00550,0.00030,0.00550,0.00610,0.00490
+Gemini-2.5-Pro,All,Female,<20,Hippocampus,0.00560,0.00030,0.00560,0.00620,0.00500
+Gemini-2.5-Pro,All,Male,20-29,Hippocampus,0.00540,0.00028,0.00540,0.00596,0.00484
+Gemini-2.5-Pro,All,Female,20-29,Hippocampus,0.00550,0.00028,0.00550,0.00606,0.00494
+Gemini-2.5-Pro,All,Male,30-39,Hippocampus,0.00530,0.00027,0.00530,0.00584,0.00476
+Gemini-2.5-Pro,All,Female,30-39,Hippocampus,0.00540,0.00027,0.00540,0.00594,0.00486
+Gemini-2.5-Pro,All,Male,40-49,Hippocampus,0.00515,0.00026,0.00515,0.00567,0.00463
+Gemini-2.5-Pro,All,Female,40-49,Hippocampus,0.00525,0.00026,0.00525,0.00577,0.00473
+Gemini-2.5-Pro,All,Male,50-59,Hippocampus,0.00500,0.00025,0.00500,0.00550,0.00450
+Gemini-2.5-Pro,All,Female,50-59,Hippocampus,0.00510,0.00025,0.00510,0.00560,0.00460
+Gemini-2.5-Pro,All,Male,60-69,Hippocampus,0.00485,0.00024,0.00485,0.00533,0.00437
+Gemini-2.5-Pro,All,Female,60-69,Hippocampus,0.00495,0.00024,0.00495,0.00543,0.00447
+Gemini-2.5-Pro,All,Male,70-79,Hippocampus,0.00470,0.00023,0.00470,0.00516,0.00424
+Gemini-2.5-Pro,All,Female,70-79,Hippocampus,0.00480,0.00023,0.00480,0.00526,0.00434
+Gemini-2.5-Pro,All,Male,80-89,Hippocampus,0.00455,0.00022,0.00455,0.00499,0.00411
+Gemini-2.5-Pro,All,Female,80-89,Hippocampus,0.00465,0.00022,0.00465,0.00509,0.00421
+Gemini-2.5-Pro,All,Male,90+,Hippocampus,0.00440,0.00021,0.00440,0.00482,0.00398
+Gemini-2.5-Pro,All,Female,90+,Hippocampus,0.00450,0.00021,0.00450,0.00492,0.00408
+Gemini-2.5-Pro,All,Male,<20,Entorhinal Cortex,0.00220,0.00013,0.00220,0.00246,0.00194
+Gemini-2.5-Pro,All,Female,<20,Entorhinal Cortex,0.00225,0.00013,0.00225,0.00251,0.00199
+Gemini-2.5-Pro,All,Male,20-29,Entorhinal Cortex,0.00215,0.00012,0.00215,0.00239,0.00191
+Gemini-2.5-Pro,All,Female,20-29,Entorhinal Cortex,0.00220,0.00012,0.00220,0.00244,0.00196
+Gemini-2.5-Pro,All,Male,30-39,Entorhinal Cortex,0.00210,0.00012,0.00210,0.00234,0.00186
+Gemini-2.5-Pro,All,Female,30-39,Entorhinal Cortex,0.00215,0.00012,0.00215,0.00239,0.00191
+Gemini-2.5-Pro,All,Male,40-49,Entorhinal Cortex,0.00205,0.00011,0.00205,0.00227,0.00183
+Gemini-2.5-Pro,All,Female,40-49,Entorhinal Cortex,0.00210,0.00011,0.00210,0.00232,0.00188
+Gemini-2.5-Pro,All,Male,50-59,Entorhinal Cortex,0.00200,0.00011,0.00200,0.00222,0.00178
+Gemini-2.5-Pro,All,Female,50-59,Entorhinal Cortex,0.00205,0.00011,0.00205,0.00227,0.00183
+Gemini-2.5-Pro,All,Male,60-69,Entorhinal Cortex,0.00195,0.00011,0.00195,0.00217,0.00173
+Gemini-2.5-Pro,All,Female,60-69,Entorhinal Cortex,0.00200,0.00011,0.00200,0.00222,0.00178
+Gemini-2.5-Pro,All,Male,70-79,Entorhinal Cortex,0.00190,0.00010,0.00190,0.00210,0.00170
+Gemini-2.5-Pro,All,Female,70-79,Entorhinal Cortex,0.00195,0.00010,0.00195,0.00215,0.00175
+Gemini-2.5-Pro,All,Male,80-89,Entorhinal Cortex,0.00185,0.00010,0.00185,0.00205,0.00165
+Gemini-2.5-Pro,All,Female,80-89,Entorhinal Cortex,0.00190,0.00010,0.00190,0.00210,0.00170
+Gemini-2.5-Pro,All,Male,90+,Entorhinal Cortex,0.00180,0.00010,0.00180,0.00200,0.00160
+Gemini-2.5-Pro,All,Female,90+,Entorhinal Cortex,0.00185,0.00010,0.00185,0.00205,0.00165
+Gemini-2.5-Pro,All,Male,<20,Temporal Lobes,0.12400,0.00460,0.12400,0.13320,0.11480
+Gemini-2.5-Pro,All,Female,<20,Temporal Lobes,0.12550,0.00460,0.12550,0.13470,0.11630
+Gemini-2.5-Pro,All,Male,20-29,Temporal Lobes,0.12300,0.00450,0.12300,0.13200,0.11400
+Gemini-2.5-Pro,All,Female,20-29,Temporal Lobes,0.12450,0.00450,0.12450,0.13350,0.11550
+Gemini-2.5-Pro,All,Male,30-39,Temporal Lobes,0.12200,0.00440,0.12200,0.13080,0.11320
+Gemini-2.5-Pro,All,Female,30-39,Temporal Lobes,0.12350,0.00440,0.12350,0.13230,0.11470
+Gemini-2.5-Pro,All,Male,40-49,Temporal Lobes,0.12050,0.00430,0.12050,0.12910,0.11190
+Gemini-2.5-Pro,All,Female,40-49,Temporal Lobes,0.12200,0.00430,0.12200,0.13060,0.11340
+Gemini-2.5-Pro,All,Male,50-59,Temporal Lobes,0.11900,0.00420,0.11900,0.12740,0.11060
+Gemini-2.5-Pro,All,Female,50-59,Temporal Lobes,0.12050,0.00420,0.12050,0.12910,0.11190
+Gemini-2.5-Pro,All,Male,60-69,Temporal Lobes,0.11750,0.00410,0.11750,0.12570,0.10930
+Gemini-2.5-Pro,All,Female,60-69,Temporal Lobes,0.11900,0.00410,0.11900,0.12740,0.11060
+Gemini-2.5-Pro,All,Male,70-79,Temporal Lobes,0.11600,0.00400,0.11600,0.12400,0.10800
+Gemini-2.5-Pro,All,Female,70-79,Temporal Lobes,0.11750,0.00400,0.11750,0.12570,0.10930
+Gemini-2.5-Pro,All,Male,80-89,Temporal Lobes,0.11450,0.00390,0.11450,0.12230,0.10670
+Gemini-2.5-Pro,All,Female,80-89,Temporal Lobes,0.11600,0.00390,0.11600,0.12380,0.10820
+Gemini-2.5-Pro,All,Male,90+,Temporal Lobes,0.11300,0.00380,0.11300,0.12060,0.10540
+Gemini-2.5-Pro,All,Female,90+,Temporal Lobes,0.11450,0.00380,0.11450,0.12210,0.10690
+Gemini-2.5-Pro,All,Male,<20,Parietal Lobes,0.11900,0.00410,0.11900,0.12720,0.11080
+Gemini-2.5-Pro,All,Female,<20,Parietal Lobes,0.12050,0.00410,0.12050,0.12870,0.11230
+Gemini-2.5-Pro,All,Male,20-29,Parietal Lobes,0.11800,0.00400,0.11800,0.12600,0.11000
+Gemini-2.5-Pro,All,Female,20-29,Parietal Lobes,0.11950,0.00400,0.11950,0.12750,0.11150
+Gemini-2.5-Pro,All,Male,30-39,Parietal Lobes,0.11700,0.00390,0.11700,0.12480,0.10920
+Gemini-2.5-Pro,All,Female,30-39,Parietal Lobes,0.11850,0.00390,0.11850,0.12630,0.11070
+Gemini-2.5-Pro,All,Male,40-49,Parietal Lobes,0.11550,0.00380,0.11550,0.12310,0.10790
+Gemini-2.5-Pro,All,Female,40-49,Parietal Lobes,0.11700,0.00380,0.11700,0.12460,0.10940
+Gemini-2.5-Pro,All,Male,50-59,Parietal Lobes,0.11400,0.00370,0.11400,0.12140,0.10660
+Gemini-2.5-Pro,All,Female,50-59,Parietal Lobes,0.11550,0.00370,0.11550,0.12290,0.10810
+Gemini-2.5-Pro,All,Male,60-69,Parietal Lobes,0.11250,0.00360,0.11250,0.11970,0.10530
+Gemini-2.5-Pro,All,Female,60-69,Parietal Lobes,0.11400,0.00360,0.11400,0.12120,0.10680
+Gemini-2.5-Pro,All,Male,70-79,Parietal Lobes,0.11100,0.00350,0.11100,0.11800,0.10400
+Gemini-2.5-Pro,All,Female,70-79,Parietal Lobes,0.11250,0.00350,0.11250,0.11950,0.10550
+Gemini-2.5-Pro,All,Male,80-89,Parietal Lobes,0.10950,0.00340,0.10950,0.11630,0.10270
+Gemini-2.5-Pro,All,Female,80-89,Parietal Lobes,0.11100,0.00340,0.11100,0.11780,0.10420
+Gemini-2.5-Pro,All,Male,90+,Parietal Lobes,0.10800,0.00330,0.10800,0.11460,0.10140
+Gemini-2.5-Pro,All,Female,90+,Parietal Lobes,0.10950,0.00330,0.10950,0.11610,0.10290
+Gemini-2.5-Pro,All,Male,<20,Amygdala,0.00200,0.00011,0.00200,0.00222,0.00178
+Gemini-2.5-Pro,All,Female,<20,Amygdala,0.00205,0.00011,0.00205,0.00227,0.00183
+Gemini-2.5-Pro,All,Male,20-29,Amygdala,0.00195,0.00010,0.00195,0.00215,0.00175
+Gemini-2.5-Pro,All,Female,20-29,Amygdala,0.00200,0.00010,0.00200,0.00220,0.00180
+Gemini-2.5-Pro,All,Male,30-39,Amygdala,0.00190,0.00010,0.00190,0.00210,0.00170
+Gemini-2.5-Pro,All,Female,30-39,Amygdala,0.00195,0.00010,0.00195,0.00215,0.00175
+Gemini-2.5-Pro,All,Male,40-49,Amygdala,0.00185,0.00009,0.00185,0.00203,0.00167
+Gemini-2.5-Pro,All,Female,40-49,Amygdala,0.00190,0.00009,0.00190,0.00208,0.00172
+Gemini-2.5-Pro,All,Male,50-59,Amygdala,0.00180,0.00009,0.00180,0.00198,0.00162
+Gemini-2.5-Pro,All,Female,50-59,Amygdala,0.00185,0.00009,0.00185,0.00203,0.00167
+Gemini-2.5-Pro,All,Male,60-69,Amygdala,0.00175,0.00009,0.00175,0.00193,0.00157
+Gemini-2.5-Pro,All,Female,60-69,Amygdala,0.00180,0.00009,0.00180,0.00198,0.00162
+Gemini-2.5-Pro,All,Male,70-79,Amygdala,0.00170,0.00008,0.00170,0.00186,0.00154
+Gemini-2.5-Pro,All,Female,70-79,Amygdala,0.00175,0.00008,0.00175,0.00191,0.00159
+Gemini-2.5-Pro,All,Male,80-89,Amygdala,0.00165,0.00008,0.00165,0.00181,0.00149
+Gemini-2.5-Pro,All,Female,80-89,Amygdala,0.00170,0.00008,0.00170,0.00186,0.00154
+Gemini-2.5-Pro,All,Male,90+,Amygdala,0.00160,0.00008,0.00160,0.00176,0.00144
+Gemini-2.5-Pro,All,Female,90+,Amygdala,0.00165,0.00008,0.00165,0.00181,0.00149
+Gemini-2.5-Pro,All,Male,<20,Basal Forebrain,0.00055,0.00004,0.00055,0.00063,0.00047
+Gemini-2.5-Pro,All,Female,<20,Basal Forebrain,0.00056,0.00004,0.00056,0.00064,0.00048
+Gemini-2.5-Pro,All,Male,20-29,Basal Forebrain,0.00054,0.00003,0.00054,0.00060,0.00048
+Gemini-2.5-Pro,All,Female,20-29,Basal Forebrain,0.00055,0.00003,0.00055,0.00061,0.00049
+Gemini-2.5-Pro,All,Male,30-39,Basal Forebrain,0.00053,0.00003,0.00053,0.00059,0.00047
+Gemini-2.5-Pro,All,Female,30-39,Basal Forebrain,0.00054,0.00003,0.00054,0.00060,0.00048
+Gemini-2.5-Pro,All,Male,40-49,Basal Forebrain,0.00052,0.00003,0.00052,0.00058,0.00046
+Gemini-2.5-Pro,All,Female,40-49,Basal Forebrain,0.00053,0.00003,0.00053,0.00059,0.00047
+Gemini-2.5-Pro,All,Male,50-59,Basal Forebrain,0.00051,0.00003,0.00051,0.00057,0.00045
+Gemini-2.5-Pro,All,Female,50-59,Basal Forebrain,0.00052,0.00003,0.00052,0.00058,0.00046
+Gemini-2.5-Pro,All,Male,60-69,Basal Forebrain,0.00050,0.00003,0.00050,0.00056,0.00044
+Gemini-2.5-Pro,All,Female,60-69,Basal Forebrain,0.00051,0.00003,0.00051,0.00057,0.00045
+Gemini-2.5-Pro,All,Male,70-79,Basal Forebrain,0.00049,0.00003,0.00049,0.00055,0.00043
+Gemini-2.5-Pro,All,Female,70-79,Basal Forebrain,0.00050,0.00003,0.00050,0.00056,0.00044
+Gemini-2.5-Pro,All,Male,80-89,Basal Forebrain,0.00048,0.00003,0.00048,0.00054,0.00042
+Gemini-2.5-Pro,All,Female,80-89,Basal Forebrain,0.00049,0.00003,0.00049,0.00055,0.00043
+Gemini-2.5-Pro,All,Male,90+,Basal Forebrain,0.00047,0.00003,0.00047,0.00053,0.00041
+Gemini-2.5-Pro,All,Female,90+,Basal Forebrain,0.00048,0.00003,0.00048,0.00054,0.00042
+Gemini-2.5-Pro,All,Male,<20,Accumbens,0.00090,0.00005,0.00090,0.00100,0.00080
+Gemini-2.5-Pro,All,Female,<20,Accumbens,0.00092,0.00005,0.00092,0.00102,0.00082
+Gemini-2.5-Pro,All,Male,20-29,Accumbens,0.00088,0.00004,0.00088,0.00096,0.00080
+Gemini-2.5-Pro,All,Female,20-29,Accumbens,0.00090,0.00004,0.00090,0.00098,0.00082
+Gemini-2.5-Pro,All,Male,30-39,Accumbens,0.00086,0.00004,0.00086,0.00094,0.00078
+Gemini-2.5-Pro,All,Female,30-39,Accumbens,0.00088,0.00004,0.00088,0.00096,0.00080
+Gemini-2.5-Pro,All,Male,40-49,Accumbens,0.00084,0.00004,0.00084,0.00092,0.00076
+Gemini-2.5-Pro,All,Female,40-49,Accumbens,0.00086,0.00004,0.00086,0.00094,0.00078
+Gemini-2.5-Pro,All,Male,50-59,Accumbens,0.00082,0.00004,0.00082,0.00090,0.00074
+Gemini-2.5-Pro,All,Female,50-59,Accumbens,0.00084,0.00004,0.00084,0.00092,0.00076
+Gemini-2.5-Pro,All,Male,60-69,Accumbens,0.00080,0.00004,0.00080,0.00088,0.00072
+Gemini-2.5-Pro,All,Female,60-69,Accumbens,0.00082,0.00004,0.00082,0.00090,0.00074
+Gemini-2.5-Pro,All,Male,70-79,Accumbens,0.00078,0.00004,0.00078,0.00086,0.00070
+Gemini-2.5-Pro,All,Female,70-79,Accumbens,0.00080,0.00004,0.00080,0.00088,0.00072
+Gemini-2.5-Pro,All,Male,80-89,Accumbens,0.00076,0.00004,0.00076,0.00084,0.00068
+Gemini-2.5-Pro,All,Female,80-89,Accumbens,0.00078,0.00004,0.00078,0.00086,0.00070
+Gemini-2.5-Pro,All,Male,90+,Accumbens,0.00074,0.00004,0.00074,0.00082,0.00066
+Gemini-2.5-Pro,All,Female,90+,Accumbens,0.00076,0.00004,0.00076,0.00084,0.00068
+Gemini-2.5-Pro,All,Male,<20,Ventral DC,0.00310,0.00015,0.00310,0.00340,0.00280
+Gemini-2.5-Pro,All,Female,<20,Ventral DC,0.00315,0.00015,0.00315,0.00345,0.00285
+Gemini-2.5-Pro,All,Male,20-29,Ventral DC,0.00305,0.00014,0.00305,0.00333,0.00277
+Gemini-2.5-Pro,All,Female,20-29,Ventral DC,0.00310,0.00014,0.00310,0.00338,0.00282
+Gemini-2.5-Pro,All,Male,30-39,Ventral DC,0.00300,0.00014,0.00300,0.00328,0.00272
+Gemini-2.5-Pro,All,Female,30-39,Ventral DC,0.00305,0.00014,0.00305,0.00333,0.00277
+Gemini-2.5-Pro,All,Male,40-49,Ventral DC,0.00295,0.00013,0.00295,0.00321,0.00269
+Gemini-2.5-Pro,All,Female,40-49,Ventral DC,0.00300,0.00013,0.00300,0.00326,0.00274
+Gemini-2.5-Pro,All,Male,50-59,Ventral DC,0.00290,0.00013,0.00290,0.00316,0.00264
+Gemini-2.5-Pro,All,Female,50-59,Ventral DC,0.00295,0.00013,0.00295,0.00321,0.00269
+Gemini-2.5-Pro,All,Male,60-69,Ventral DC,0.00285,0.00013,0.00285,0.00311,0.00259
+Gemini-2.5-Pro,All,Female,60-69,Ventral DC,0.00290,0.00013,0.00290,0.00316,0.00264
+Gemini-2.5-Pro,All,Male,70-79,Ventral DC,0.00280,0.00012,0.00280,0.00304,0.00256
+Gemini-2.5-Pro,All,Female,70-79,Ventral DC,0.00285,0.00012,0.00285,0.00309,0.00261
+Gemini-2.5-Pro,All,Male,80-89,Ventral DC,0.00275,0.00012,0.00275,0.00299,0.00251
+Gemini-2.5-Pro,All,Female,80-89,Ventral DC,0.00280,0.00012,0.00280,0.00304,0.00256
+Gemini-2.5-Pro,All,Male,90+,Ventral DC,0.00270,0.00012,0.00270,0.00294,0.00246
+Gemini-2.5-Pro,All,Female,90+,Ventral DC,0.00275,0.00012,0.00275,0.00299,0.00251
+Gemini-2.5-Pro,All,Male,<20,Lateral Ventricle,0.00400,0.00050,0.00400,0.00500,0.00300
+Gemini-2.5-Pro,All,Female,<20,Lateral Ventricle,0.00410,0.00050,0.00410,0.00510,0.00310
+Gemini-2.5-Pro,All,Male,20-29,Lateral Ventricle,0.00420,0.00055,0.00420,0.00530,0.00310
+Gemini-2.5-Pro,All,Female,20-29,Lateral Ventricle,0.00430,0.00055,0.00430,0.00540,0.00320
+Gemini-2.5-Pro,All,Male,30-39,Lateral Ventricle,0.00440,0.00060,0.00440,0.00560,0.00320
+Gemini-2.5-Pro,All,Female,30-39,Lateral Ventricle,0.00450,0.00060,0.00450,0.00570,0.00330
+Gemini-2.5-Pro,All,Male,40-49,Lateral Ventricle,0.00460,0.00065,0.00460,0.00590,0.00330
+Gemini-2.5-Pro,All,Female,40-49,Lateral Ventricle,0.00470,0.00065,0.00470,0.00600,0.00340
+Gemini-2.5-Pro,All,Male,50-59,Lateral Ventricle,0.00480,0.00070,0.00480,0.00620,0.00340
+Gemini-2.5-Pro,All,Female,50-59,Lateral Ventricle,0.00490,0.00070,0.00490,0.00630,0.00350
+Gemini-2.5-Pro,All,Male,60-69,Lateral Ventricle,0.00500,0.00075,0.00500,0.00650,0.00350
+Gemini-2.5-Pro,All,Female,60-69,Lateral Ventricle,0.00510,0.00075,0.00510,0.00660,0.00360
+Gemini-2.5-Pro,All,Male,70-79,Lateral Ventricle,0.00520,0.00080,0.00520,0.00680,0.00360
+Gemini-2.5-Pro,All,Female,70-79,Lateral Ventricle,0.00530,0.00080,0.00530,0.00690,0.00370
+Gemini-2.5-Pro,All,Male,80-89,Lateral Ventricle,0.00540,0.00085,0.00540,0.00710,0.00370
+Gemini-2.5-Pro,All,Female,80-89,Lateral Ventricle,0.00550,0.00085,0.00550,0.00720,0.00380
+Gemini-2.5-Pro,All,Male,90+,Lateral Ventricle,0.00560,0.00090,0.00560,0.00740,0.00380
+Gemini-2.5-Pro,All,Female,90+,Lateral Ventricle,0.00570,0.00090,0.00570,0.00750,0.00390

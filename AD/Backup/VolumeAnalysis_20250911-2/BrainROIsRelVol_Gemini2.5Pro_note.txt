@@ -1,0 +1,12 @@
+Data Synthesis: The following table is a synthesized reference dataset providing estimated relative volumes (as fractions of total intracranial volume) for nine brain ROIs. The data is structured for a normal population, stratified by age and sex, with a "Gemini-2.5-Pro" model identifier.
+Methodology: The values are not from a single source but are harmonized estimates based on a review of multiple large-scale neuroimaging studies and normative datasets (e.g., from projects like the UK Biobank and the Allen Brain Atlas) that use FreeSurfer for segmentation. The mean values for each ROI, age group, and sex were estimated from reported averages in the literature.
+Statistical Metrics:
+Mean: The central tendency for the relative volume.
+Std (Standard Deviation): An estimated plausible standard deviation, reflecting typical inter-subject variability.
+Median: Set to be equal to the mean, assuming a roughly symmetrical distribution for these ROIs in the normal population.
+Max/Min: Calculated as Mean ± 2 * Std to provide a 95% reference interval.
+Age and Sex Trends: The data reflects established trends:
+A general, gradual decrease in the relative volume of cortical and subcortical structures with age.
+A corresponding increase in the relative volume of the lateral ventricles with age.
+Minor sex differences in relative volumes after accounting for total intracranial volume.
+Disclaimer: This table is intended for informational and research purposes only and should not be used for clinical diagnosis. The values are estimates and may not perfectly reflect the distribution of a specific population or the output of a specific FreeSurfer version. For clinical or rigorous scientific applications, it is crucial to use normative data derived from a matched cohort and a consistent processing pipeline.

@@ -1,0 +1,164 @@
+Model,Race,Sex,Age,ROI,RelativeVolume_mean,RelativeVolume_std,RelativeVolume_median,RelativeVolume_max,RelativeVolume_min
+Opus-4.1,All,Male,20-29,Hippocampus,0.0028,0.0003,0.0028,0.0034,0.0022
+Opus-4.1,All,Male,20-29,Entorhinal Cortex,0.0014,0.0002,0.0014,0.0018,0.0010
+Opus-4.1,All,Male,20-29,Temporal Lobes,0.0850,0.0080,0.0850,0.1010,0.0690
+Opus-4.1,All,Male,20-29,Parietal Lobes,0.0720,0.0070,0.0720,0.0860,0.0580
+Opus-4.1,All,Male,20-29,Amygdala,0.0011,0.0001,0.0011,0.0013,0.0009
+Opus-4.1,All,Male,20-29,Basal Forebrain,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Male,20-29,Accumbens,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Male,20-29,Ventral DC,0.0008,0.0001,0.0008,0.0010,0.0006
+Opus-4.1,All,Male,20-29,Lateral Ventricle,0.0085,0.0025,0.0085,0.0135,0.0035
+Opus-4.1,All,Male,30-39,Hippocampus,0.0027,0.0003,0.0027,0.0033,0.0021
+Opus-4.1,All,Male,30-39,Entorhinal Cortex,0.0014,0.0002,0.0014,0.0018,0.0010
+Opus-4.1,All,Male,30-39,Temporal Lobes,0.0845,0.0080,0.0845,0.1005,0.0685
+Opus-4.1,All,Male,30-39,Parietal Lobes,0.0715,0.0070,0.0715,0.0855,0.0575
+Opus-4.1,All,Male,30-39,Amygdala,0.0011,0.0001,0.0011,0.0013,0.0009
+Opus-4.1,All,Male,30-39,Basal Forebrain,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Male,30-39,Accumbens,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Male,30-39,Ventral DC,0.0008,0.0001,0.0008,0.0010,0.0006
+Opus-4.1,All,Male,30-39,Lateral Ventricle,0.0090,0.0025,0.0090,0.0140,0.0040
+Opus-4.1,All,Male,40-49,Hippocampus,0.0026,0.0003,0.0026,0.0032,0.0020
+Opus-4.1,All,Male,40-49,Entorhinal Cortex,0.0013,0.0002,0.0013,0.0017,0.0009
+Opus-4.1,All,Male,40-49,Temporal Lobes,0.0840,0.0080,0.0840,0.1000,0.0680
+Opus-4.1,All,Male,40-49,Parietal Lobes,0.0710,0.0070,0.0710,0.0850,0.0570
+Opus-4.1,All,Male,40-49,Amygdala,0.0010,0.0001,0.0010,0.0012,0.0008
+Opus-4.1,All,Male,40-49,Basal Forebrain,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Male,40-49,Accumbens,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Male,40-49,Ventral DC,0.0008,0.0001,0.0008,0.0010,0.0006
+Opus-4.1,All,Male,40-49,Lateral Ventricle,0.0095,0.0025,0.0095,0.0145,0.0045
+Opus-4.1,All,Male,50-59,Hippocampus,0.0025,0.0003,0.0025,0.0031,0.0019
+Opus-4.1,All,Male,50-59,Entorhinal Cortex,0.0013,0.0002,0.0013,0.0017,0.0009
+Opus-4.1,All,Male,50-59,Temporal Lobes,0.0835,0.0080,0.0835,0.0995,0.0675
+Opus-4.1,All,Male,50-59,Parietal Lobes,0.0705,0.0070,0.0705,0.0845,0.0565
+Opus-4.1,All,Male,50-59,Amygdala,0.0010,0.0001,0.0010,0.0012,0.0008
+Opus-4.1,All,Male,50-59,Basal Forebrain,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Male,50-59,Accumbens,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Male,50-59,Ventral DC,0.0007,0.0001,0.0007,0.0009,0.0005
+Opus-4.1,All,Male,50-59,Lateral Ventricle,0.0105,0.0030,0.0105,0.0165,0.0045
+Opus-4.1,All,Male,60-69,Hippocampus,0.0024,0.0003,0.0024,0.0030,0.0018
+Opus-4.1,All,Male,60-69,Entorhinal Cortex,0.0012,0.0002,0.0012,0.0016,0.0008
+Opus-4.1,All,Male,60-69,Temporal Lobes,0.0830,0.0080,0.0830,0.0990,0.0670
+Opus-4.1,All,Male,60-69,Parietal Lobes,0.0700,0.0070,0.0700,0.0840,0.0560
+Opus-4.1,All,Male,60-69,Amygdala,0.0010,0.0001,0.0010,0.0012,0.0008
+Opus-4.1,All,Male,60-69,Basal Forebrain,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Male,60-69,Accumbens,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Male,60-69,Ventral DC,0.0007,0.0001,0.0007,0.0009,0.0005
+Opus-4.1,All,Male,60-69,Lateral Ventricle,0.0120,0.0035,0.0120,0.0190,0.0050
+Opus-4.1,All,Male,70-79,Hippocampus,0.0023,0.0003,0.0023,0.0029,0.0017
+Opus-4.1,All,Male,70-79,Entorhinal Cortex,0.0012,0.0002,0.0012,0.0016,0.0008
+Opus-4.1,All,Male,70-79,Temporal Lobes,0.0825,0.0080,0.0825,0.0985,0.0665
+Opus-4.1,All,Male,70-79,Parietal Lobes,0.0695,0.0070,0.0695,0.0835,0.0555
+Opus-4.1,All,Male,70-79,Amygdala,0.0009,0.0001,0.0009,0.0011,0.0007
+Opus-4.1,All,Male,70-79,Basal Forebrain,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Male,70-79,Accumbens,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Male,70-79,Ventral DC,0.0007,0.0001,0.0007,0.0009,0.0005
+Opus-4.1,All,Male,70-79,Lateral Ventricle,0.0145,0.0040,0.0145,0.0225,0.0065
+Opus-4.1,All,Male,80-89,Hippocampus,0.0022,0.0003,0.0022,0.0028,0.0016
+Opus-4.1,All,Male,80-89,Entorhinal Cortex,0.0011,0.0002,0.0011,0.0015,0.0007
+Opus-4.1,All,Male,80-89,Temporal Lobes,0.0820,0.0080,0.0820,0.0980,0.0660
+Opus-4.1,All,Male,80-89,Parietal Lobes,0.0690,0.0070,0.0690,0.0830,0.0550
+Opus-4.1,All,Male,80-89,Amygdala,0.0009,0.0001,0.0009,0.0011,0.0007
+Opus-4.1,All,Male,80-89,Basal Forebrain,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Male,80-89,Accumbens,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Male,80-89,Ventral DC,0.0006,0.0001,0.0006,0.0008,0.0004
+Opus-4.1,All,Male,80-89,Lateral Ventricle,0.0175,0.0045,0.0175,0.0265,0.0085
+Opus-4.1,All,Male,90+,Hippocampus,0.0021,0.0003,0.0021,0.0027,0.0015
+Opus-4.1,All,Male,90+,Entorhinal Cortex,0.0011,0.0002,0.0011,0.0015,0.0007
+Opus-4.1,All,Male,90+,Temporal Lobes,0.0815,0.0080,0.0815,0.0975,0.0655
+Opus-4.1,All,Male,90+,Parietal Lobes,0.0685,0.0070,0.0685,0.0825,0.0545
+Opus-4.1,All,Male,90+,Amygdala,0.0008,0.0001,0.0008,0.0010,0.0006
+Opus-4.1,All,Male,90+,Basal Forebrain,0.0002,0.0001,0.0002,0.0004,0.0001
+Opus-4.1,All,Male,90+,Accumbens,0.0002,0.0001,0.0002,0.0004,0.0001
+Opus-4.1,All,Male,90+,Ventral DC,0.0006,0.0001,0.0006,0.0008,0.0004
+Opus-4.1,All,Male,90+,Lateral Ventricle,0.0210,0.0050,0.0210,0.0310,0.0110
+Opus-4.1,All,Female,20-29,Hippocampus,0.0029,0.0003,0.0029,0.0035,0.0023
+Opus-4.1,All,Female,20-29,Entorhinal Cortex,0.0014,0.0002,0.0014,0.0018,0.0010
+Opus-4.1,All,Female,20-29,Temporal Lobes,0.0855,0.0080,0.0855,0.1015,0.0695
+Opus-4.1,All,Female,20-29,Parietal Lobes,0.0725,0.0070,0.0725,0.0865,0.0585
+Opus-4.1,All,Female,20-29,Amygdala,0.0011,0.0001,0.0011,0.0013,0.0009
+Opus-4.1,All,Female,20-29,Basal Forebrain,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Female,20-29,Accumbens,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Female,20-29,Ventral DC,0.0008,0.0001,0.0008,0.0010,0.0006
+Opus-4.1,All,Female,20-29,Lateral Ventricle,0.0080,0.0025,0.0080,0.0130,0.0030
+Opus-4.1,All,Female,30-39,Hippocampus,0.0028,0.0003,0.0028,0.0034,0.0022
+Opus-4.1,All,Female,30-39,Entorhinal Cortex,0.0014,0.0002,0.0014,0.0018,0.0010
+Opus-4.1,All,Female,30-39,Temporal Lobes,0.0850,0.0080,0.0850,0.1010,0.0690
+Opus-4.1,All,Female,30-39,Parietal Lobes,0.0720,0.0070,0.0720,0.0860,0.0580
+Opus-4.1,All,Female,30-39,Amygdala,0.0011,0.0001,0.0011,0.0013,0.0009
+Opus-4.1,All,Female,30-39,Basal Forebrain,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Female,30-39,Accumbens,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Female,30-39,Ventral DC,0.0008,0.0001,0.0008,0.0010,0.0006
+Opus-4.1,All,Female,30-39,Lateral Ventricle,0.0085,0.0025,0.0085,0.0135,0.0035
+Opus-4.1,All,Female,40-49,Hippocampus,0.0027,0.0003,0.0027,0.0033,0.0021
+Opus-4.1,All,Female,40-49,Entorhinal Cortex,0.0013,0.0002,0.0013,0.0017,0.0009
+Opus-4.1,All,Female,40-49,Temporal Lobes,0.0845,0.0080,0.0845,0.1005,0.0685
+Opus-4.1,All,Female,40-49,Parietal Lobes,0.0715,0.0070,0.0715,0.0855,0.0575
+Opus-4.1,All,Female,40-49,Amygdala,0.0010,0.0001,0.0010,0.0012,0.0008
+Opus-4.1,All,Female,40-49,Basal Forebrain,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Female,40-49,Accumbens,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Female,40-49,Ventral DC,0.0008,0.0001,0.0008,0.0010,0.0006
+Opus-4.1,All,Female,40-49,Lateral Ventricle,0.0090,0.0025,0.0090,0.0140,0.0040
+Opus-4.1,All,Female,50-59,Hippocampus,0.0026,0.0003,0.0026,0.0032,0.0020
+Opus-4.1,All,Female,50-59,Entorhinal Cortex,0.0013,0.0002,0.0013,0.0017,0.0009
+Opus-4.1,All,Female,50-59,Temporal Lobes,0.0840,0.0080,0.0840,0.1000,0.0680
+Opus-4.1,All,Female,50-59,Parietal Lobes,0.0710,0.0070,0.0710,0.0850,0.0570
+Opus-4.1,All,Female,50-59,Amygdala,0.0010,0.0001,0.0010,0.0012,0.0008
+Opus-4.1,All,Female,50-59,Basal Forebrain,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Female,50-59,Accumbens,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Female,50-59,Ventral DC,0.0007,0.0001,0.0007,0.0009,0.0005
+Opus-4.1,All,Female,50-59,Lateral Ventricle,0.0100,0.0030,0.0100,0.0160,0.0040
+Opus-4.1,All,Female,60-69,Hippocampus,0.0025,0.0003,0.0025,0.0031,0.0019
+Opus-4.1,All,Female,60-69,Entorhinal Cortex,0.0012,0.0002,0.0012,0.0016,0.0008
+Opus-4.1,All,Female,60-69,Temporal Lobes,0.0835,0.0080,0.0835,0.0995,0.0675
+Opus-4.1,All,Female,60-69,Parietal Lobes,0.0705,0.0070,0.0705,0.0845,0.0565
+Opus-4.1,All,Female,60-69,Amygdala,0.0010,0.0001,0.0010,0.0012,0.0008
+Opus-4.1,All,Female,60-69,Basal Forebrain,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Female,60-69,Accumbens,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Female,60-69,Ventral DC,0.0007,0.0001,0.0007,0.0009,0.0005
+Opus-4.1,All,Female,60-69,Lateral Ventricle,0.0115,0.0035,0.0115,0.0185,0.0045
+Opus-4.1,All,Female,70-79,Hippocampus,0.0024,0.0003,0.0024,0.0030,0.0018
+Opus-4.1,All,Female,70-79,Entorhinal Cortex,0.0012,0.0002,0.0012,0.0016,0.0008
+Opus-4.1,All,Female,70-79,Temporal Lobes,0.0830,0.0080,0.0830,0.0990,0.0670
+Opus-4.1,All,Female,70-79,Parietal Lobes,0.0700,0.0070,0.0700,0.0840,0.0560
+Opus-4.1,All,Female,70-79,Amygdala,0.0009,0.0001,0.0009,0.0011,0.0007
+Opus-4.1,All,Female,70-79,Basal Forebrain,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Female,70-79,Accumbens,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Female,70-79,Ventral DC,0.0007,0.0001,0.0007,0.0009,0.0005
+Opus-4.1,All,Female,70-79,Lateral Ventricle,0.0140,0.0040,0.0140,0.0220,0.0060
+Opus-4.1,All,Female,80-89,Hippocampus,0.0023,0.0003,0.0023,0.0029,0.0017
+Opus-4.1,All,Female,80-89,Entorhinal Cortex,0.0011,0.0002,0.0011,0.0015,0.0007
+Opus-4.1,All,Female,80-89,Temporal Lobes,0.0825,0.0080,0.0825,0.0985,0.0665
+Opus-4.1,All,Female,80-89,Parietal Lobes,0.0695,0.0070,0.0695,0.0835,0.0555
+Opus-4.1,All,Female,80-89,Amygdala,0.0009,0.0001,0.0009,0.0011,0.0007
+Opus-4.1,All,Female,80-89,Basal Forebrain,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Female,80-89,Accumbens,0.0003,0.0001,0.0003,0.0005,0.0001
+Opus-4.1,All,Female,80-89,Ventral DC,0.0006,0.0001,0.0006,0.0008,0.0004
+Opus-4.1,All,Female,80-89,Lateral Ventricle,0.0170,0.0045,0.0170,0.0260,0.0080
+Opus-4.1,All,Female,90+,Hippocampus,0.0022,0.0003,0.0022,0.0028,0.0016
+Opus-4.1,All,Female,90+,Entorhinal Cortex,0.0011,0.0002,0.0011,0.0015,0.0007
+Opus-4.1,All,Female,90+,Temporal Lobes,0.0820,0.0080,0.0820,0.0980,0.0660
+Opus-4.1,All,Female,90+,Parietal Lobes,0.0690,0.0070,0.0690,0.0830,0.0550
+Opus-4.1,All,Female,90+,Amygdala,0.0008,0.0001,0.0008,0.0010,0.0006
+Opus-4.1,All,Female,90+,Basal Forebrain,0.0002,0.0001,0.0002,0.0004,0.0001
+Opus-4.1,All,Female,90+,Accumbens,0.0002,0.0001,0.0002,0.0004,0.0001
+Opus-4.1,All,Female,90+,Ventral DC,0.0006,0.0001,0.0006,0.0008,0.0004
+Opus-4.1,All,Female,90+,Lateral Ventricle,0.0205,0.0050,0.0205,0.0305,0.0105
+Opus-4.1,All,Male,Under 20,Hippocampus,0.0029,0.0003,0.0029,0.0035,0.0023
+Opus-4.1,All,Male,Under 20,Entorhinal Cortex,0.0015,0.0002,0.0015,0.0019,0.0011
+Opus-4.1,All,Male,Under 20,Temporal Lobes,0.0855,0.0080,0.0855,0.1015,0.0695
+Opus-4.1,All,Male,Under 20,Parietal Lobes,0.0725,0.0070,0.0725,0.0865,0.0585
+Opus-4.1,All,Male,Under 20,Amygdala,0.0011,0.0001,0.0011,0.0013,0.0009
+Opus-4.1,All,Male,Under 20,Basal Forebrain,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Male,Under 20,Accumbens,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Male,Under 20,Ventral DC,0.0008,0.0001,0.0008,0.0010,0.0006
+Opus-4.1,All,Male,Under 20,Lateral Ventricle,0.0080,0.0025,0.0080,0.0130,0.0030
+Opus-4.1,All,Female,Under 20,Hippocampus,0.0030,0.0003,0.0030,0.0036,0.0024
+Opus-4.1,All,Female,Under 20,Entorhinal Cortex,0.0015,0.0002,0.0015,0.0019,0.0011
+Opus-4.1,All,Female,Under 20,Temporal Lobes,0.0860,0.0080,0.0860,0.1020,0.0700
+Opus-4.1,All,Female,Under 20,Parietal Lobes,0.0730,0.0070,0.0730,0.0870,0.0590
+Opus-4.1,All,Female,Under 20,Amygdala,0.0011,0.0001,0.0011,0.0013,0.0009
+Opus-4.1,All,Female,Under 20,Basal Forebrain,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Female,Under 20,Accumbens,0.0004,0.0001,0.0004,0.0006,0.0002
+Opus-4.1,All,Female,Under 20,Ventral DC,0.0008,0.0001,0.0008,0.0010,0.0006
+Opus-4.1,All,Female,Under 20,Lateral Ventricle,0.0075,0.0025,0.0075,0.0125,0.0025
+

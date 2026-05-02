@@ -1,0 +1,127 @@
+Model,Race,Sex,Age,ROI,RelativeVolume_mean,RelativeVolume_std,RelativeVolume_median,RelativeVolume_max,RelativeVolume_min
+Gemini-2.5-Pro,All,Male,20-29,Hippocampus,0.0045,0.0005,0.0045,NaN,NaN
+Gemini-2.5-Pro,All,Male,20-29,Entorhinal Cortex,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Male,20-29,Temporal Lobes,0.085,0.008,0.085,NaN,NaN
+Gemini-2.5-Pro,All,Male,20-29,Parietal Lobes,0.095,0.009,0.095,NaN,NaN
+Gemini-2.5-Pro,All,Male,20-29,Amygdala,0.0018,0.0003,0.0018,NaN,NaN
+Gemini-2.5-Pro,All,Male,20-29,Basal Forebrain,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Male,20-29,Accumbens,0.0006,0.0001,0.0006,NaN,NaN
+Gemini-2.5-Pro,All,Male,20-29,Ventral DC,0.0075,0.0007,0.0075,NaN,NaN
+Gemini-2.5-Pro,All,Male,20-29,Lateral Ventricle,0.005,0.002,0.005,NaN,NaN
+Gemini-2.5-Pro,All,Female,20-29,Hippocampus,0.0046,0.0005,0.0046,NaN,NaN
+Gemini-2.5-Pro,All,Female,20-29,Entorhinal Cortex,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Female,20-29,Temporal Lobes,0.086,0.008,0.086,NaN,NaN
+Gemini-2.5-Pro,All,Female,20-29,Parietal Lobes,0.096,0.009,0.096,NaN,NaN
+Gemini-2.5-Pro,All,Female,20-29,Amygdala,0.0019,0.0003,0.0019,NaN,NaN
+Gemini-2.5-Pro,All,Female,20-29,Basal Forebrain,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Female,20-29,Accumbens,0.0006,0.0001,0.0006,NaN,NaN
+Gemini-2.5-Pro,All,Female,20-29,Ventral DC,0.0076,0.0007,0.0076,NaN,NaN
+Gemini-2.5-Pro,All,Female,20-29,Lateral Ventricle,0.0048,0.002,0.0048,NaN,NaN
+Gemini-2.5-Pro,All,Male,30-39,Hippocampus,0.0044,0.0005,0.0044,NaN,NaN
+Gemini-2.5-Pro,All,Male,30-39,Entorhinal Cortex,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Male,30-39,Temporal Lobes,0.084,0.008,0.084,NaN,NaN
+Gemini-2.5-Pro,All,Male,30-39,Parietal Lobes,0.094,0.009,0.094,NaN,NaN
+Gemini-2.5-Pro,All,Male,30-39,Amygdala,0.0018,0.0003,0.0018,NaN,NaN
+Gemini-2.5-Pro,All,Male,30-39,Basal Forebrain,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Male,30-39,Accumbens,0.0006,0.0001,0.0006,NaN,NaN
+Gemini-2.5-Pro,All,Male,30-39,Ventral DC,0.0074,0.0007,0.0074,NaN,NaN
+Gemini-2.5-Pro,All,Male,30-39,Lateral Ventricle,0.006,0.002,0.006,NaN,NaN
+Gemini-2.5-Pro,All,Female,30-39,Hippocampus,0.0045,0.0005,0.0045,NaN,NaN
+Gemini-2.5-Pro,All,Female,30-39,Entorhinal Cortex,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Female,30-39,Temporal Lobes,0.085,0.008,0.085,NaN,NaN
+Gemini-2.5-Pro,All,Female,30-39,Parietal Lobes,0.095,0.009,0.095,NaN,NaN
+Gemini-2.5-Pro,All,Female,30-39,Amygdala,0.0019,0.0003,0.0019,NaN,NaN
+Gemini-2.5-Pro,All,Female,30-39,Basal Forebrain,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Female,30-39,Accumbens,0.0006,0.0001,0.0006,NaN,NaN
+Gemini-2.5-Pro,All,Female,30-39,Ventral DC,0.0075,0.0007,0.0075,NaN,NaN
+Gemini-2.5-Pro,All,Female,30-39,Lateral Ventricle,0.0058,0.002,0.0058,NaN,NaN
+Gemini-2.5-Pro,All,Male,40-49,Hippocampus,0.0043,0.0005,0.0043,NaN,NaN
+Gemini-2.5-Pro,All,Male,40-49,Entorhinal Cortex,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Male,40-49,Temporal Lobes,0.083,0.008,0.083,NaN,NaN
+Gemini-2.5-Pro,All,Male,40-49,Parietal Lobes,0.093,0.009,0.093,NaN,NaN
+Gemini-2.5-Pro,All,Male,40-49,Amygdala,0.0017,0.0003,0.0017,NaN,NaN
+Gemini-2.5-Pro,All,Male,40-49,Basal Forebrain,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Male,40-49,Accumbens,0.0006,0.0001,0.0006,NaN,NaN
+Gemini-2.5-Pro,All,Male,40-49,Ventral DC,0.0073,0.0007,0.0073,NaN,NaN
+Gemini-2.5-Pro,All,Male,40-49,Lateral Ventricle,0.007,0.002,0.007,NaN,NaN
+Gemini-2.5-Pro,All,Female,40-49,Hippocampus,0.0044,0.0005,0.0044,NaN,NaN
+Gemini-2.5-Pro,All,Female,40-49,Entorhinal Cortex,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Female,40-49,Temporal Lobes,0.084,0.008,0.084,NaN,NaN
+Gemini-2.5-Pro,All,Female,40-49,Parietal Lobes,0.094,0.009,0.094,NaN,NaN
+Gemini-2.5-Pro,All,Female,40-49,Amygdala,0.0018,0.0003,0.0018,NaN,NaN
+Gemini-2.5-Pro,All,Female,40-49,Basal Forebrain,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Female,40-49,Accumbens,0.0006,0.0001,0.0006,NaN,NaN
+Gemini-2.5-Pro,All,Female,40-49,Ventral DC,0.0074,0.0007,0.0074,NaN,NaN
+Gemini-2.5-Pro,All,Female,40-49,Lateral Ventricle,0.0068,0.002,0.0068,NaN,NaN
+Gemini-2.5-Pro,All,Male,50-59,Hippocampus,0.0042,0.0005,0.0042,NaN,NaN
+Gemini-2.5-Pro,All,Male,50-59,Entorhinal Cortex,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Male,50-59,Temporal Lobes,0.082,0.008,0.082,NaN,NaN
+Gemini-2.5-Pro,All,Male,50-59,Parietal Lobes,0.092,0.009,0.092,NaN,NaN
+Gemini-2.5-Pro,All,Male,50-59,Amygdala,0.0017,0.0003,0.0017,NaN,NaN
+Gemini-2.5-Pro,All,Male,50-59,Basal Forebrain,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Male,50-59,Accumbens,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Male,50-59,Ventral DC,0.0072,0.0007,0.0072,NaN,NaN
+Gemini-2.5-Pro,All,Male,50-59,Lateral Ventricle,0.008,0.003,0.008,NaN,NaN
+Gemini-2.5-Pro,All,Female,50-59,Hippocampus,0.0043,0.0005,0.0043,NaN,NaN
+Gemini-2.5-Pro,All,Female,50-59,Entorhinal Cortex,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Female,50-59,Temporal Lobes,0.083,0.008,0.083,NaN,NaN
+Gemini-2.5-Pro,All,Female,50-59,Parietal Lobes,0.093,0.009,0.093,NaN,NaN
+Gemini-2.5-Pro,All,Female,50-59,Amygdala,0.0018,0.0003,0.0018,NaN,NaN
+Gemini-2.5-Pro,All,Female,50-59,Basal Forebrain,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Female,50-59,Accumbens,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Female,50-59,Ventral DC,0.0073,0.0007,0.0073,NaN,NaN
+Gemini-2.5-Pro,All,Female,50-59,Lateral Ventricle,0.0078,0.003,0.0078,NaN,NaN
+Gemini-2.5-Pro,All,Male,60-69,Hippocampus,0.0041,0.0006,0.0041,NaN,NaN
+Gemini-2.5-Pro,All,Male,60-69,Entorhinal Cortex,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Male,60-69,Temporal Lobes,0.081,0.008,0.081,NaN,NaN
+Gemini-2.5-Pro,All,Male,60-69,Parietal Lobes,0.091,0.009,0.091,NaN,NaN
+Gemini-2.5-Pro,All,Male,60-69,Amygdala,0.0016,0.0003,0.0016,NaN,NaN
+Gemini-2.5-Pro,All,Male,60-69,Basal Forebrain,0.0003,0.0001,0.0003,NaN,NaN
+Gemini-2.5-Pro,All,Male,60-69,Accumbens,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Male,60-69,Ventral DC,0.0071,0.0007,0.0071,NaN,NaN
+Gemini-2.5-Pro,All,Male,60-69,Lateral Ventricle,0.009,0.003,0.009,NaN,NaN
+Gemini-2.5-Pro,All,Female,60-69,Hippocampus,0.0042,0.0006,0.0042,NaN,NaN
+Gemini-2.5-Pro,All,Female,60-69,Entorhinal Cortex,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Female,60-69,Temporal Lobes,0.082,0.008,0.082,NaN,NaN
+Gemini-2.5-Pro,All,Female,60-69,Parietal Lobes,0.092,0.009,0.092,NaN,NaN
+Gemini-2.5-Pro,All,Female,60-69,Amygdala,0.0017,0.0003,0.0017,NaN,NaN
+Gemini-2.5-Pro,All,Female,60-69,Basal Forebrain,0.0003,0.0001,0.0003,NaN,NaN
+Gemini-2.5-Pro,All,Female,60-69,Accumbens,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Female,60-69,Ventral DC,0.0072,0.0007,0.0072,NaN,NaN
+Gemini-2.5-Pro,All,Female,60-69,Lateral Ventricle,0.0088,0.003,0.0088,NaN,NaN
+Gemini-2.5-Pro,All,Male,70-79,Hippocampus,0.0039,0.0006,0.0039,NaN,NaN
+Gemini-2.5-Pro,All,Male,70-79,Entorhinal Cortex,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Male,70-79,Temporal Lobes,0.079,0.009,0.079,NaN,NaN
+Gemini-2.5-Pro,All,Male,70-79,Parietal Lobes,0.089,0.01,0.089,NaN,NaN
+Gemini-2.5-Pro,All,Male,70-79,Amygdala,0.0015,0.0003,0.0015,NaN,NaN
+Gemini-2.5-Pro,All,Male,70-79,Basal Forebrain,0.0003,0.0001,0.0003,NaN,NaN
+Gemini-2.5-Pro,All,Male,70-79,Accumbens,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Male,70-79,Ventral DC,0.0069,0.0007,0.0069,NaN,NaN
+Gemini-2.5-Pro,All,Male,70-79,Lateral Ventricle,0.011,0.004,0.011,NaN,NaN
+Gemini-2.5-Pro,All,Female,70-79,Hippocampus,0.004,0.0006,0.004,NaN,NaN
+Gemini-2.5-Pro,All,Female,70-79,Entorhinal Cortex,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Female,70-79,Temporal Lobes,0.08,0.009,0.08,NaN,NaN
+Gemini-2.5-Pro,All,Female,70-79,Parietal Lobes,0.09,0.01,0.09,NaN,NaN
+Gemini-2.5-Pro,All,Female,70-79,Amygdala,0.0016,0.0003,0.0016,NaN,NaN
+Gemini-2.5-Pro,All,Female,70-79,Basal Forebrain,0.0003,0.0001,0.0003,NaN,NaN
+Gemini-2.5-Pro,All,Female,70-79,Accumbens,0.0005,0.0001,0.0005,NaN,NaN
+Gemini-2.5-Pro,All,Female,70-79,Ventral DC,0.007,0.0007,0.007,NaN,NaN
+Gemini-2.5-Pro,All,Female,70-79,Lateral Ventricle,0.0108,0.004,0.0108,NaN,NaN
+Gemini-2.5-Pro,All,Male,80+,Hippocampus,0.0037,0.0007,0.0037,NaN,NaN
+Gemini-2.5-Pro,All,Male,80+,Entorhinal Cortex,0.0003,0.0001,0.0003,NaN,NaN
+Gemini-2.5-Pro,All,Male,80+,Temporal Lobes,0.077,0.009,0.077,NaN,NaN
+Gemini-2.5-Pro,All,Male,80+,Parietal Lobes,0.087,0.01,0.087,NaN,NaN
+Gemini-2.5-Pro,All,Male,80+,Amygdala,0.0014,0.0003,0.0014,NaN,NaN
+Gemini-2.5-Pro,All,Male,80+,Basal Forebrain,0.0003,0.0001,0.0003,NaN,NaN
+Gemini-2.5-Pro,All,Male,80+,Accumbens,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Male,80+,Ventral DC,0.0067,0.0008,0.0067,NaN,NaN
+Gemini-2.5-Pro,All,Male,80+,Lateral Ventricle,0.013,0.005,0.013,NaN,NaN
+Gemini-2.5-Pro,All,Female,80+,Hippocampus,0.0038,0.0007,0.0038,NaN,NaN
+Gemini-2.5-Pro,All,Female,80+,Entorhinal Cortex,0.0003,0.0001,0.0003,NaN,NaN
+Gemini-2.5-Pro,All,Female,80+,Temporal Lobes,0.078,0.009,0.078,NaN,NaN
+Gemini-2.5-Pro,All,Female,80+,Parietal Lobes,0.088,0.01,0.088,NaN,NaN
+Gemini-2.5-Pro,All,Female,80+,Amygdala,0.0015,0.0003,0.0015,NaN,NaN
+Gemini-2.5-Pro,All,Female,80+,Basal Forebrain,0.0003,0.0001,0.0003,NaN,NaN
+Gemini-2.5-Pro,All,Female,80+,Accumbens,0.0004,0.0001,0.0004,NaN,NaN
+Gemini-2.5-Pro,All,Female,80+,Ventral DC,0.0068,0.0008,0.0068,NaN,NaN
+Gemini-2.5-Pro,All,Female,80+,Lateral Ventricle,0.0128,0.005,0.0128,NaN,NaN

@@ -1,0 +1,163 @@
+Model,Race,Sex,Age,ROI,RelativeVolume_mean,RelativeVolume_std,RelativeVolume_median,RelativeVolume_max,RelativeVolume_min
+Llama-3.3,All,Male,20-,Hippocampus,0.0042,0.0003,0.0042,0.0048,0.0036
+Llama-3.3,All,Male,20-,Entorhinal Cortex,0.0011,0.0001,0.0011,0.0013,0.0009
+Llama-3.3,All,Male,20-,Temporal Lobes,0.1650,0.0080,0.1650,0.1810,0.1490
+Llama-3.3,All,Male,20-,Parietal Lobes,0.1420,0.0070,0.1420,0.1560,0.1280
+Llama-3.3,All,Male,20-,Amygdala,0.0018,0.0002,0.0018,0.0021,0.0015
+Llama-3.3,All,Male,20-,Basal Forebrain,0.0015,0.0002,0.0015,0.0018,0.0012
+Llama-3.3,All,Male,20-,Accumbens,0.0006,0.0001,0.0006,0.0007,0.0005
+Llama-3.3,All,Male,20-,Ventral DC,0.0032,0.0003,0.0032,0.0036,0.0028
+Llama-3.3,All,Male,20-,Lateral Ventricle,0.0120,0.0020,0.0120,0.0160,0.0080
+Llama-3.3,All,Male,20-29,Hippocampus,0.0041,0.0003,0.0041,0.0047,0.0035
+Llama-3.3,All,Male,20-29,Entorhinal Cortex,0.0011,0.0001,0.0011,0.0013,0.0009
+Llama-3.3,All,Male,20-29,Temporal Lobes,0.1640,0.0080,0.1640,0.1800,0.1480
+Llama-3.3,All,Male,20-29,Parietal Lobes,0.1410,0.0070,0.1410,0.1550,0.1270
+Llama-3.3,All,Male,20-29,Amygdala,0.0018,0.0002,0.0018,0.0021,0.0015
+Llama-3.3,All,Male,20-29,Basal Forebrain,0.0015,0.0002,0.0015,0.0018,0.0012
+Llama-3.3,All,Male,20-29,Accumbens,0.0006,0.0001,0.0006,0.0007,0.0005
+Llama-3.3,All,Male,20-29,Ventral DC,0.0032,0.0003,0.0032,0.0036,0.0028
+Llama-3.3,All,Male,20-29,Lateral Ventricle,0.0125,0.0020,0.0125,0.0165,0.0085
+Llama-3.3,All,Male,30-39,Hippocampus,0.0040,0.0003,0.0040,0.0046,0.0034
+Llama-3.3,All,Male,30-39,Entorhinal Cortex,0.0010,0.0001,0.0010,0.0012,0.0008
+Llama-3.3,All,Male,30-39,Temporal Lobes,0.1630,0.0080,0.1630,0.1790,0.1470
+Llama-3.3,All,Male,30-39,Parietal Lobes,0.1400,0.0070,0.1400,0.1540,0.1260
+Llama-3.3,All,Male,30-39,Amygdala,0.0017,0.0002,0.0017,0.0020,0.0014
+Llama-3.3,All,Male,30-39,Basal Forebrain,0.0014,0.0002,0.0014,0.0017,0.0011
+Llama-3.3,All,Male,30-39,Accumbens,0.0006,0.0001,0.0006,0.0007,0.0005
+Llama-3.3,All,Male,30-39,Ventral DC,0.0031,0.0003,0.0031,0.0035,0.0027
+Llama-3.3,All,Male,30-39,Lateral Ventricle,0.0130,0.0020,0.0130,0.0170,0.0090
+Llama-3.3,All,Male,40-49,Hippocampus,0.0039,0.0003,0.0039,0.0045,0.0033
+Llama-3.3,All,Male,40-49,Entorhinal Cortex,0.0010,0.0001,0.0010,0.0012,0.0008
+Llama-3.3,All,Male,40-49,Temporal Lobes,0.1620,0.0080,0.1620,0.1780,0.1460
+Llama-3.3,All,Male,40-49,Parietal Lobes,0.1390,0.0070,0.1390,0.1530,0.1250
+Llama-3.3,All,Male,40-49,Amygdala,0.0017,0.0002,0.0017,0.0020,0.0014
+Llama-3.3,All,Male,40-49,Basal Forebrain,0.0014,0.0002,0.0014,0.0017,0.0011
+Llama-3.3,All,Male,40-49,Accumbens,0.0006,0.0001,0.0006,0.0007,0.0005
+Llama-3.3,All,Male,40-49,Ventral DC,0.0030,0.0003,0.0030,0.0034,0.0026
+Llama-3.3,All,Male,40-49,Lateral Ventricle,0.0135,0.0020,0.0135,0.0175,0.0095
+Llama-3.3,All,Male,50-59,Hippocampus,0.0038,0.0003,0.0038,0.0044,0.0032
+Llama-3.3,All,Male,50-59,Entorhinal Cortex,0.0009,0.0001,0.0009,0.0011,0.0007
+Llama-3.3,All,Male,50-59,Temporal Lobes,0.1610,0.0080,0.1610,0.1770,0.1450
+Llama-3.3,All,Male,50-59,Parietal Lobes,0.1380,0.0070,0.1380,0.1520,0.1240
+Llama-3.3,All,Male,50-59,Amygdala,0.0016,0.0002,0.0016,0.0019,0.0013
+Llama-3.3,All,Male,50-59,Basal Forebrain,0.0013,0.0002,0.0013,0.0016,0.0010
+Llama-3.3,All,Male,50-59,Accumbens,0.0005,0.0001,0.0005,0.0006,0.0004
+Llama-3.3,All,Male,50-59,Ventral DC,0.0029,0.0003,0.0029,0.0033,0.0025
+Llama-3.3,All,Male,50-59,Lateral Ventricle,0.0140,0.0020,0.0140,0.0180,0.0100
+Llama-3.3,All,Male,60-69,Hippocampus,0.0037,0.0003,0.0037,0.0043,0.0031
+Llama-3.3,All,Male,60-69,Entorhinal Cortex,0.0009,0.0001,0.0009,0.0011,0.0007
+Llama-3.3,All,Male,60-69,Temporal Lobes,0.1600,0.0080,0.1600,0.1760,0.1440
+Llama-3.3,All,Male,60-69,Parietal Lobes,0.1370,0.0070,0.1370,0.1510,0.1230
+Llama-3.3,All,Male,60-69,Amygdala,0.0016,0.0002,0.0016,0.0019,0.0013
+Llama-3.3,All,Male,60-69,Basal Forebrain,0.0013,0.0002,0.0013,0.0016,0.0010
+Llama-3.3,All,Male,60-69,Accumbens,0.0005,0.0001,0.0005,0.0006,0.0004
+Llama-3.3,All,Male,60-69,Ventral DC,0.0028,0.0003,0.0028,0.0032,0.0024
+Llama-3.3,All,Male,60-69,Lateral Ventricle,0.0145,0.0020,0.0145,0.0185,0.0105
+Llama-3.3,All,Male,70-79,Hippocampus,0.0036,0.0003,0.0036,0.0042,0.0030
+Llama-3.3,All,Male,70-79,Entorhinal Cortex,0.0008,0.0001,0.0008,0.0010,0.0006
+Llama-3.3,All,Male,70-79,Temporal Lobes,0.1590,0.0080,0.1590,0.1750,0.1430
+Llama-3.3,All,Male,70-79,Parietal Lobes,0.1360,0.0070,0.1360,0.1500,0.1220
+Llama-3.3,All,Male,70-79,Amygdala,0.0015,0.0002,0.0015,0.0018,0.0012
+Llama-3.3,All,Male,70-79,Basal Forebrain,0.0012,0.0002,0.0012,0.0015,0.0009
+Llama-3.3,All,Male,70-79,Accumbens,0.0005,0.0001,0.0005,0.0006,0.0004
+Llama-3.3,All,Male,70-79,Ventral DC,0.0027,0.0003,0.0027,0.0031,0.0023
+Llama-3.3,All,Male,70-79,Lateral Ventricle,0.0150,0.0020,0.0150,0.0190,0.0110
+Llama-3.3,All,Male,80-89,Hippocampus,0.0035,0.0003,0.0035,0.0041,0.0029
+Llama-3.3,All,Male,80-89,Entorhinal Cortex,0.0008,0.0001,0.0008,0.0010,0.0006
+Llama-3.3,All,Male,80-89,Temporal Lobes,0.1580,0.0080,0.1580,0.1740,0.1420
+Llama-3.3,All,Male,80-89,Parietal Lobes,0.1350,0.0070,0.1350,0.1490,0.1210
+Llama-3.3,All,Male,80-89,Amygdala,0.0015,0.0002,0.0015,0.0018,0.0012
+Llama-3.3,All,Male,80-89,Basal Forebrain,0.0012,0.0002,0.0012,0.0015,0.0009
+Llama-3.3,All,Male,80-89,Accumbens,0.0005,0.0001,0.0005,0.0006,0.0004
+Llama-3.3,All,Male,80-89,Ventral DC,0.0026,0.0003,0.0026,0.0030,0.0022
+Llama-3.3,All,Male,80-89,Lateral Ventricle,0.0155,0.0020,0.0155,0.0195,0.0115
+Llama-3.3,All,Male,90+,Hippocampus,0.0034,0.0003,0.0034,0.0040,0.0028
+Llama-3.3,All,Male,90+,Entorhinal Cortex,0.0007,0.0001,0.0007,0.0009,0.0005
+Llama-3.3,All,Male,90+,Temporal Lobes,0.1570,0.0080,0.1570,0.1730,0.1410
+Llama-3.3,All,Male,90+,Parietal Lobes,0.1340,0.0070,0.1340,0.1480,0.1200
+Llama-3.3,All,Male,90+,Amygdala,0.0014,0.0002,0.0014,0.0017,0.0011
+Llama-3.3,All,Male,90+,Basal Forebrain,0.0011,0.0002,0.0011,0.0014,0.0008
+Llama-3.3,All,Male,90+,Accumbens,0.0004,0.0001,0.0004,0.0005,0.0003
+Llama-3.3,All,Male,90+,Ventral DC,0.0025,0.0003,0.0025,0.0029,0.0021
+Llama-3.3,All,Male,90+,Lateral Ventricle,0.0160,0.0020,0.0160,0.0200,0.0120
+Llama-3.3,All,Female,20-,Hippocampus,0.0043,0.0003,0.0043,0.0049,0.0037
+Llama-3.3,All,Female,20-,Entorhinal Cortex,0.0012,0.0001,0.0012,0.0014,0.0010
+Llama-3.3,All,Female,20-,Temporal Lobes,0.1660,0.0080,0.1660,0.1820,0.1500
+Llama-3.3,All,Female,20-,Parietal Lobes,0.1430,0.0070,0.1430,0.1570,0.1290
+Llama-3.3,All,Female,20-,Amygdala,0.0019,0.0002,0.0019,0.0022,0.0016
+Llama-3.3,All,Female,20-,Basal Forebrain,0.0016,0.0002,0.0016,0.0019,0.0013
+Llama-3.3,All,Female,20-,Accumbens,0.0007,0.0001,0.0007,0.0008,0.0006
+Llama-3.3,All,Female,20-,Ventral DC,0.0033,0.0003,0.0033,0.0037,0.0029
+Llama-3.3,All,Female,20-,Lateral Ventricle,0.0115,0.0020,0.0115,0.0155,0.0075
+Llama-3.3,All,Female,20-29,Hippocampus,0.0042,0.0003,0.0042,0.0048,0.0036
+Llama-3.3,All,Female,20-29,Entorhinal Cortex,0.0012,0.0001,0.0012,0.0014,0.0010
+Llama-3.3,All,Female,20-29,Temporal Lobes,0.1650,0.0080,0.1650,0.1810,0.1490
+Llama-3.3,All,Female,20-29,Parietal Lobes,0.1420,0.0070,0.1420,0.1560,0.1280
+Llama-3.3,All,Female,20-29,Amygdala,0.0019,0.0002,0.0019,0.0022,0.0016
+Llama-3.3,All,Female,20-29,Basal Forebrain,0.0016,0.0002,0.0016,0.0019,0.0013
+Llama-3.3,All,Female,20-29,Accumbens,0.0007,0.0001,0.0007,0.0008,0.0006
+Llama-3.3,All,Female,20-29,Ventral DC,0.0033,0.0003,0.0033,0.0037,0.0029
+Llama-3.3,All,Female,20-29,Lateral Ventricle,0.0120,0.0020,0.0120,0.0160,0.0080
+Llama-3.3,All,Female,30-39,Hippocampus,0.0041,0.0003,0.0041,0.0047,0.0035
+Llama-3.3,All,Female,30-39,Entorhinal Cortex,0.0011,0.0001,0.0011,0.0013,0.0009
+Llama-3.3,All,Female,30-39,Temporal Lobes,0.1640,0.0080,0.1640,0.1800,0.1480
+Llama-3.3,All,Female,30-39,Parietal Lobes,0.1410,0.0070,0.1410,0.1550,0.1270
+Llama-3.3,All,Female,30-39,Amygdala,0.0018,0.0002,0.0018,0.0021,0.0015
+Llama-3.3,All,Female,30-39,Basal Forebrain,0.0015,0.0002,0.0015,0.0018,0.0012
+Llama-3.3,All,Female,30-39,Accumbens,0.0006,0.0001,0.0006,0.0007,0.0005
+Llama-3.3,All,Female,30-39,Ventral DC,0.0032,0.0003,0.0032,0.0036,0.0028
+Llama-3.3,All,Female,30-39,Lateral Ventricle,0.0125,0.0020,0.0125,0.0165,0.0085
+Llama-3.3,All,Female,40-49,Hippocampus,0.0040,0.0003,0.0040,0.0046,0.0034
+Llama-3.3,All,Female,40-49,Entorhinal Cortex,0.0011,0.0001,0.0011,0.0013,0.0009
+Llama-3.3,All,Female,40-49,Temporal Lobes,0.1630,0.0080,0.1630,0.1790,0.1470
+Llama-3.3,All,Female,40-49,Parietal Lobes,0.1400,0.0070,0.1400,0.1540,0.1260
+Llama-3.3,All,Female,40-49,Amygdala,0.0018,0.0002,0.0018,0.0021,0.0015
+Llama-3.3,All,Female,40-49,Basal Forebrain,0.0015,0.0002,0.0015,0.0018,0.0012
+Llama-3.3,All,Female,40-49,Accumbens,0.0006,0.0001,0.0006,0.0007,0.0005
+Llama-3.3,All,Female,40-49,Ventral DC,0.0031,0.0003,0.0031,0.0035,0.0027
+Llama-3.3,All,Female,40-49,Lateral Ventricle,0.0130,0.0020,0.0130,0.0170,0.0090
+Llama-3.3,All,Female,50-59,Hippocampus,0.0039,0.0003,0.0039,0.0045,0.0033
+Llama-3.3,All,Female,50-59,Entorhinal Cortex,0.0010,0.0001,0.0010,0.0012,0.0008
+Llama-3.3,All,Female,50-59,Temporal Lobes,0.1620,0.0080,0.1620,0.1780,0.1460
+Llama-3.3,All,Female,50-59,Parietal Lobes,0.1390,0.0070,0.1390,0.1530,0.1250
+Llama-3.3,All,Female,50-59,Amygdala,0.0017,0.0002,0.0017,0.0020,0.0014
+Llama-3.3,All,Female,50-59,Basal Forebrain,0.0014,0.0002,0.0014,0.0017,0.0011
+Llama-3.3,All,Female,50-59,Accumbens,0.0006,0.0001,0.0006,0.0007,0.0005
+Llama-3.3,All,Female,50-59,Ventral DC,0.0030,0.0003,0.0030,0.0034,0.0026
+Llama-3.3,All,Female,50-59,Lateral Ventricle,0.0135,0.0020,0.0135,0.0175,0.0095
+Llama-3.3,All,Female,60-69,Hippocampus,0.0038,0.0003,0.0038,0.0044,0.0032
+Llama-3.3,All,Female,60-69,Entorhinal Cortex,0.0010,0.0001,0.0010,0.0012,0.0008
+Llama-3.3,All,Female,60-69,Temporal Lobes,0.1610,0.0080,0.1610,0.1770,0.1450
+Llama-3.3,All,Female,60-69,Parietal Lobes,0.1380,0.0070,0.1380,0.1520,0.1240
+Llama-3.3,All,Female,60-69,Amygdala,0.0017,0.0002,0.0017,0.0020,0.0014
+Llama-3.3,All,Female,60-69,Basal Forebrain,0.0014,0.0002,0.0014,0.0017,0.0011
+Llama-3.3,All,Female,60-69,Accumbens,0.0006,0.0001,0.0006,0.0007,0.0005
+Llama-3.3,All,Female,60-69,Ventral DC,0.0029,0.0003,0.0029,0.0033,0.0025
+Llama-3.3,All,Female,60-69,Lateral Ventricle,0.0140,0.0020,0.0140,0.0180,0.0100
+Llama-3.3,All,Female,70-79,Hippocampus,0.0037,0.0003,0.0037,0.0043,0.0031
+Llama-3.3,All,Female,70-79,Entorhinal Cortex,0.0009,0.0001,0.0009,0.0011,0.0007
+Llama-3.3,All,Female,70-79,Temporal Lobes,0.1600,0.0080,0.1600,0.1760,0.1440
+Llama-3.3,All,Female,70-79,Parietal Lobes,0.1370,0.0070,0.1370,0.1510,0.1230
+Llama-3.3,All,Female,70-79,Amygdala,0.0016,0.0002,0.0016,0.0019,0.0013
+Llama-3.3,All,Female,70-79,Basal Forebrain,0.0013,0.0002,0.0013,0.0016,0.0010
+Llama-3.3,All,Female,70-79,Accumbens,0.0005,0.0001,0.0005,0.0006,0.0004
+Llama-3.3,All,Female,70-79,Ventral DC,0.0028,0.0003,0.0028,0.0032,0.0024
+Llama-3.3,All,Female,70-79,Lateral Ventricle,0.0145,0.0020,0.0145,0.0185,0.0105
+Llama-3.3,All,Female,80-89,Hippocampus,0.0036,0.0003,0.0036,0.0042,0.0030
+Llama-3.3,All,Female,80-89,Entorhinal Cortex,0.0009,0.0001,0.0009,0.0011,0.0007
+Llama-3.3,All,Female,80-89,Temporal Lobes,0.1590,0.0080,0.1590,0.1750,0.1430
+Llama-3.3,All,Female,80-89,Parietal Lobes,0.1360,0.0070,0.1360,0.1500,0.1220
+Llama-3.3,All,Female,80-89,Amygdala,0.0016,0.0002,0.0016,0.0019,0.0013
+Llama-3.3,All,Female,80-89,Basal Forebrain,0.0013,0.0002,0.0013,0.0016,0.0010
+Llama-3.3,All,Female,80-89,Accumbens,0.0005,0.0001,0.0005,0.0006,0.0004
+Llama-3.3,All,Female,80-89,Ventral DC,0.0027,0.0003,0.0027,0.0031,0.0023
+Llama-3.3,All,Female,80-89,Lateral Ventricle,0.0150,0.0020,0.0150,0.0190,0.0110
+Llama-3.3,All,Female,90+,Hippocampus,0.0035,0.0003,0.0035,0.0041,0.0029
+Llama-3.3,All,Female,90+,Entorhinal Cortex,0.0008,0.0001,0.0008,0.0010,0.0006
+Llama-3.3,All,Female,90+,Temporal Lobes,0.1580,0.0080,0.1580,0.1740,0.1420
+Llama-3.3,All,Female,90+,Parietal Lobes,0.1350,0.0070,0.1350,0.1490,0.1210
+Llama-3.3,All,Female,90+,Amygdala,0.0015,0.0002,0.0015,0.0018,0.0012
+Llama-3.3,All,Female,90+,Basal Forebrain,0.0012,0.0002,0.0012,0.0015,0.0009
+Llama-3.3,All,Female,90+,Accumbens,0.0005,0.0001,0.0005,0.0006,0.0004
+Llama-3.3,All,Female,90+,Ventral DC,0.0026,0.0003,0.0026,0.0030,0.0022
+Llama-3.3,All,Female,90+,Lateral Ventricle,0.0155,0.0020,0.0155,0.0195,0.0115

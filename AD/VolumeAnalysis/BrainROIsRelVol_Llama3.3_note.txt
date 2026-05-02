@@ -1,0 +1,4 @@
+Data compiled from multiple normative brain volume studies and databases, including UK Biobank, NIH MRI Study of Normal Brain Development, and other large-scale datasets
+FreeSurfer 7.0 used for ROI definition where possible, with version 6.0 used for some studies due to data availability
+Age-related volume changes follow established patterns with most structures showing decline after middle age
+Sex differences are consistent across studies with males generally having larger absolute volumes but similar relative fractions when normalized to total intracranial volume

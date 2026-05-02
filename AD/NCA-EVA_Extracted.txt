@@ -1,0 +1,2635 @@
+Journal of Imaging Informatics in Medicine 
+https://doi.org/10.1007/s10278-025-01706-0
+
+ORIGINAL PAPER
+
+NCA-EVA: An Innovative Ensemble-Based Approach for Alzheimer’s 
+Disease Detection from Magnetic Resonance Imaging
+
+Esra Yüzgeç Özdemir1,2 
+
+ · Canan Koç1 
+
+ · Fatih Özyurt1 
+
+Received: 15 July 2025 / Revised: 8 September 2025 / Accepted: 21 September 2025 
+© The Author(s) under exclusive licence to Society for Imaging Informatics in Medicine 2025
+
+Abstract
+Alzheimer’s disease is a progressive neurodegenerative disorder that is challenging to diagnose at an early stage. Affecting 
+over 55 million people worldwide, its prevalence is expected to rise sharply by 2030. The use of artificial intelligence (AI) 
+techniques has become increasingly important to improve the speed and accuracy of diagnosis. In this study, we propose the 
+NCA-Enhanced Voting Algorithm for Alzheimer’s Classification (NCA-EVA) to support computer-aided diagnosis. A total 
+of 66 models were trained for four-class data and six models for two-class data. The proposed method successfully classified 
+all four stages of Alzheimer’s disease, achieving 98.97% accuracy in four-class classification and 99.87% accuracy in binary 
+classification. Moreover, with a processing time of just 1.26 s, NCA-EVA is approximately 1200 times faster than a compara-
+ble study using NCA-based feature selection. These findings demonstrate that Alzheimer’s diagnosis can be performed both 
+quickly and with high accuracy, and the proposed approach has potential applications in other healthcare data analysis tasks.
+
+Keywords  Alzheimer’s disease · Artificial intelligence · Vision Transformers · CNN · Feature extraction
+
+Introduction
+
+Background
+
+Alzheimer’s disease (AD) is a neurodegenerative disorder 
+that results in cognitive decline in the brain. This disease 
+causes the decline of cognitive functions and progressively 
+worsens over time. This trend results in a decline in cogni-
+tive function throughout the disease [1]. Alzheimer’s disease 
+is characterized as a progressive condition with five primary 
+stages [2]. This disease is challenging to identify in everyday 
+life as it does not exhibit conspicuous signs until it reaches 
+severe stages. If not recognized promptly, the condition will 
+advance and cause harm to the brain.
+
+Currently,  there  is  no  medication  available  to  halt  or 
+reverse Alzheimer’s disease. The therapy approach does not 
+offer a cure for the condition, and the timing and causes of 
+this chronic degenerative process remain mostly unknown. 
+
+ *  Fatih Özyurt 
+
+ozyurtfatih@gmail.com
+
+1  Software Engineering, Engineering Faculty, Firat University, 
+
+Elazığ, Turkey
+
+2  Computer Engineering, Engineering and Architecture 
+
+Faculty, Bingol University, Bingöl, Turkey
+
+Diagnosis  of  this  condition  is  challenging  until  severe 
+symptoms are evident, and it is believed to be influenced by 
+environmental or genetic factors, including previous head 
+trauma, hypertension, and depression [3]. The 2021 Alz-
+heimer’s Disease International (ADI) report indicates that a 
+survey was administered to 1111 multidisciplinary doctors, 
+205 dementia patients, and 2122 dementia caregivers. This 
+poll indicates that 47% refrain from seeking a diagnosis due 
+to insufficient access to qualified specialists, 34% due to the 
+financial burden of diagnosis and treatment, and 46% due 
+to apprehension about a dementia diagnosis. These rates 
+have been recognized as substantial impediments to diag-
+nosis. Additional obstacles to clinical diagnoses encompass 
+restricted access to specialist diagnostic tests (38%) and the 
+perception among patients and their families that no inter-
+ventions are possible following a dementia diagnosis (33%) 
+[4]. Given these percentages, the early diagnostic rate of 
+Alzheimer’s disease is deemed highly challenging.
+
+Globally, 55 million individuals have received a diagnosis 
+of Alzheimer’s disease. This figure is anticipated to rise dra-
+matically by 2030. Given the clinical, social, and economic 
+circumstances, early diagnosis is significantly challenging. 
+Given the numerous illness outbreaks globally and the prev-
+alent skepticism towards treatment protocols, the rising inci-
+dence of Alzheimer’s disease is accompanied by challenges 
+
+Vol.:(0123456789) 
+in diagnostic and therapeutic intervention. Furthermore, the 
+ADI report released in 2021 indicated that almost 30% of 
+fatalities ascribed to Alzheimer’s disease were inaccurately 
+diagnosed. Re-evaluations with computerized imaging scans 
+were performed on these patients, yielding a 25% correction 
+in diagnosis. Given this situation, the utilization of magnetic 
+resonance imaging (MRI) and computed tomography (CT) 
+scans, which are readily available technologies, in conjunc-
+tion with clinical assessments for diagnosing dementia and 
+Alzheimer’s disease, is a significant measure in mitigating 
+potential diagnostic errors.
+
+Alzheimer’s disease is a disorder that impairs cognitive 
+skills due to neurodegenerative processes. The aggregation 
+of beta-amyloid plaques and tau protein tangles constitutes 
+the basic foundation of the disease. These aggregates impede 
+neural communication, causing synapse loss and ultimately 
+culminating  in  neurodegeneration  marked  by  neuronal 
+death [5]. These biological processes predominantly influ-
+ence brain regions associated with memory and cognitive 
+functioning, including the hippocampus and cortex. The 
+demise of neuronal cells and synaptic degradation results in 
+significant deficits in memory, language, problem-solving, 
+and daily functioning.
+
+The initial phases of Alzheimer’s disease are character-
+ized by symptom ambiguity and their conflation with aging 
+indications, which complicates diagnosis. Early diagnosis 
+is  essential  for  the  prompt  commencement  of  therapies 
+designed to mitigate disease development [6]. Nonetheless, 
+the existing diagnostic approaches lack adequate precision 
+at this stage. Imaging modalities like MRI and CT scans are 
+essential instruments for identifying structural alterations 
+in the brain; however, these changes generally manifest in 
+the advanced stages of the disease. Advanced technologies, 
+including biomarker analysis and PET scans for early diag-
+nosis, provide enhanced accuracy; however, their extensive 
+clinical application is restricted by cost and accessibility 
+limitations [7].
+
+AI-assisted diagnostic methods represent a significant 
+advancement for the early detection of Alzheimer’s disease. 
+AI systems can scrutinize extensive datasets to identify 
+nuanced alterations in brain pictures, facilitating the early 
+identification of the condition. These devices facilitate the 
+expedited and precise assessment of MRI and CT imaging 
+outcomes, specifically [8]. AI-driven decision support sys-
+tems minimize inaccuracies in clinical diagnostic procedures 
+and enhance treatment administration. AI-based decision 
+support systems enhance treatment management and lower 
+errors in clinical diagnosis procedures. The growing appli-
+cation of AI in healthcare has novel prospects for the early 
+diagnosis and therapy of neurodegenerative disorders such 
+as Alzheimer’s [9].
+
+In the advanced stages of Alzheimer’s disease, alterations 
+in brain structure become increasingly evident, but in the 
+
+Journal of Imaging Informatics in Medicine
+
+initial stages, these changes are sometimes imperceptible or 
+indistinguishable. Consequently, in addition to conventional 
+imaging techniques, sophisticated computer-aided diagnos-
+tic technologies are essential for the early detection of the 
+disease [10]. These systems facilitating early diagnosis seek 
+to identify the disease at phases where biological alterations 
+have not yet manifested as clinical symptoms through the 
+analysis of brain imaging data. This circumstance is antici-
+pated to provide favorable results, including enhanced early 
+intervention chances and an improvement in the patient’s 
+quality of life. Artificial intelligence and other technologi-
+cal advancements significantly enhance the management of 
+complicated neurological disorders, such as Alzheimer’s dis-
+ease, by improving the efficacy and accessibility of health-
+care services [11].
+
+Motivation
+
+Deep learning architectures and multimodal data fusion 
+approaches have significantly propelled recent improve-
+ments in the diagnosis of Alzheimer’s. Numerous studies in 
+the literature indicate that these methods provide substantial 
+advantages in enhancing diagnostic precision and stream-
+lining processing durations. Prasath and Sumathi devised a 
+deep learning technique utilizing the Pipelined LeNet (PLN) 
+architecture for the early detection of Alzheimer’s disease. 
+This  approach  employed  an  image  fusion  technique  to 
+improve the interior areas of low-resolution MRI images. It 
+differentiated between Alzheimer’s and healthy brain images 
+with 99.5% accuracy utilizing a PLN architecture including 
+six convolutional layers and six sampling layers [12].
+
+Qiao et al. have created a deep learning model named 
+Convolutional-Squeeze-Excitation-Softmax-NET (CSES-
+NET). This model categorizes Alzheimer’s disease, early 
+mild  cognitive  impairment  (EMCI),  late  mild  cognitive 
+impairment (LMCI), and healthy controls by synthesiz-
+ing multi-channel data, including voxel-based morphom-
+etry, surface morphometry, and radiometric characteristics 
+derived from MRI data. The CSES-NET model has exhib-
+ited exceptional performance, achieving an accuracy rate of 
+96.17%, and has analyzed the correlations between genetic 
+and radiomic aspects of Alzheimer’s disease [13].
+
+Lu et al. have implemented a methodology that amalgam-
+ates MRI, genetic, and clinical data for Alzheimer’s diagno-
+sis through the creation of the Hierarchical Attention-Based 
+Multi-Modal Fusion (HAMF) model. This model has been 
+highly effective in assessing the risk of progression from 
+mild cognitive impairment (MCI) to Alzheimer’s disease 
+and has emerged as a viable instrument for the early diag-
+nosis of Alzheimer’s, with an accuracy rate of 87.2% [14].
+
+Sasikala et al. created a CAD system that uses MRI data 
+to diagnose Alzheimer’s disease in their published papers 
+from 2024. Structures like gray matter (GM), white matter 
+
+ 
+Journal of Imaging Informatics in Medicine 
+
+(WM), and cerebrospinal fluid (CSF) were correctly identi-
+fied during brain tissue segmentation using the iteratively 
+reweighted adaptive spatial fuzzy c-means (IRW-ASFCM) 
+approach. Features were extracted using a 2LS-WaveCNN 
+ensemble, which is a two-level selective wavelet kernel con-
+volutional neural network. After that, the neural network lay-
+ers were trained using the deep tree training (DTT) method. 
+The  specificity  rate  was  99.64%;  the  accuracy  rate  was 
+99.26%, and the precision rate was 99.26% among the Alz-
+heimer’s, cognitively normal (CN), and MCI classes, respec-
+tively. The investigation of the proposed model’s processing 
+time also showed that it outperforms previous models in 
+terms of performance and time complexity; the model took 
+97.88 s to finish the whole processing [15].
+
+In their 2024 paper, Zhao et al. performed an exhaustive 
+analysis of AI applications for Alzheimer’s disease. This 
+study addresses the application of AI in etiology discovery, 
+computer-aided diagnostic (CAD), computer-aided progno-
+sis (CAP), and treatment domains. The objective has been to 
+enhance the diagnosis and prognosis of Alzheimer’s disease 
+by the utilization of multi-modal data, including genetic, 
+neuroimaging, and linguistic information. The research has 
+attained application rates of 65% in CAD systems, 11% in 
+prognostic studies, 19% in biomarker identification, and 5% 
+in treatment utilizing AI. Zhao and his associates asserted 
+that AI methodologies may enhance clinical decision-mak-
+ing by offering efficient solutions for disease detection and 
+therapy [16].
+
+In a 2024 study, Sorour et al. introduced a deep learning 
+(DL) methodology utilizing MRI data for the early diag-
+nosis of AD. The study employed five distinct deep learn-
+ing models: CNNs without augmentation, CNNs with aug-
+mentation, CNNs combined with LSTM and augmentation, 
+CNNs integrated with SVM and augmentation, and VGG16 
+combined with SVM and augmentation. These models were 
+autonomously trained for feature extraction and classifica-
+tion tasks. The models are categorized based on the applica-
+tion of data augmentation, with particular emphasis on the 
+VGG16-SVM model, which is enhanced by transfer learning 
+techniques. The testing findings demonstrated that the CNN-
+LSTM model achieved an accuracy of 99.92%, indicating 
+improved performance [17].
+
+Huang  et  al.  devised  a  novel  approach  in  their  2024 
+research, integrating the Deep Forest algorithm with near-
+infrared (NIR) spectroscopy for the diagnosis of AD and 
+vascular dementia (VaD). This study evaluated serum sam-
+ples from the AD and VaD groups utilizing the aquaphoto-
+mics technique, which investigates the influence of water 
+molecules on hydrogen bonding. The Deep Forest model has 
+surpassed typical machine learning techniques, attaining an 
+accuracy of 98.67%, sensitivity of 97.33%, and specificity of 
+100%. This approach integrates the rapidity and precision of 
+NIR spectroscopy with the robust modeling proficiency of 
+
+deep learning, facilitating the swift and accurate distinction 
+between AD and VaD [18].
+
+Rezaee and Zhu, in their 2024 work, devised a deep learn-
+ing model that combines CascadeNet with manually con-
+structed characteristics to identify Alzheimer’s disease (AD) 
+and mild cognitive impairment (MCI) from EEG waves. In 
+the study, EEG signals were initially divided into subbands 
+by discrete wavelet transform (DWT), and then, data aug-
+mentation was executed via the windowing method. The 
+enhanced CascadeNet model was subsequently employed 
+for feature extraction and classification tasks involving these 
+signals. This model has demonstrated efficacy in detecting 
+Alzheimer’s disease (AD) and mild cognitive impairment 
+(MCI), particularly with limited datasets, by attaining high 
+accuracy in spectral pictures derived from EEG signals. 
+The fine-tuning and training duration for each CNN block 
+of the Cascade-ResNet-18 model is designated as 4 to 6 h. 
+The research attained accuracy rates of 98.84% and 97.78% 
+on the Figshare and Brazil datasets, respectively, indicating 
+enhanced performance relative to current methodologies 
+[19].
+
+Ayus and Gupta devised a hybrid model named Hybrid 
+Recurrent Ensemble Network (HReENet), employing deep 
+learning methodologies for the diagnosis of Alzheimer’s 
+disease in their 2024 article. This model seeks to categorize 
+the four stages of Alzheimer’s disease (NonDemented, Very-
+MildlyDemented, MildlyDemented, ModeratelyDemented) 
+by integrating various deep learning architectures, includ-
+ing CNN, Conv1D-LSTM, and LSTM. The model utilized 
+the  Kaggle  Alzheimer’s  classification  dataset,  attaining 
+an accuracy of 99.97%, a precision of 99.98%, a recall of 
+99.95%, and an F1-score of 99.97%. The suggested model 
+has exhibited enhanced performance relative to previous 
+models, including CNN and LSTM, markedly improving 
+classification accuracy [20].
+
+Rani et al. developed an optimal clustering-based pre-
+trained SqueezeNet model for the early diagnosis of Alz-
+heimer’s disease in their study. The research employed the 
+Adaptive Reptile Search Algorithm (ARSA) for the seg-
+mentation of gray matter (GM), white matter (WM), and 
+cerebrospinal fluid (CSF). ARSA enhances segmentation 
+accuracy by refining the identification of cluster centers. The 
+pre-trained SqueezeNet model was subsequently employed 
+to classify various phases of Alzheimer’s disease. The exper-
+imental studies of the ADNI and OASIS datasets indicated 
+that the model attained accuracy rates over 98%. The results 
+demonstrate that the model provides an efficient approach 
+for diagnosing Alzheimer’s disease [21].
+
+Alp  et  al.  developed  a  method  that  combines  Vision 
+Transformer  (ViT)  and  Time  Series  Transformer  (TST) 
+architectures to identify Alzheimer’s disease (AD) [22]. To 
+solve the problems encountered during the processing of 
+3D MRI data, the images were divided into two different 
+
+three-dimensional slices, and transfer learning techniques 
+were used. The ADNI dataset was used for binary and mul-
+ticlass classifications. The results showed that the method 
+demonstrated superior performance with 99.048% accuracy 
+in binary classification and 99.014% accuracy in multiclass 
+classification. These findings highlight the effectiveness of 
+sequence modeling methods and self-attention mechanisms 
+in medical image analysis, providing a powerful solution 
+for the early detection and classification of Alzheimer’s dis-
+ease. Literature summary of the reviewed studies is given 
+in Table 1.
+
+Recent studies have shown that deep learning-based 
+approaches achieve very high accuracy rates in the diag-
+nosis  of  Alzheimer’s  disease  [12– 22].  However,  these 
+methods have significant limitations. Many studies focus 
+solely  on  binary  classification  and  are  insufficient  in 
+
+Journal of Imaging Informatics in Medicine
+
+simultaneously detecting the different stages of Alzhei-
+mer’s disease (No Dementia, Very Mild Dementia, Mild 
+Dementia, Moderate Dementia) with high accuracy. In 
+addition, many models in the literature have a long pro-
+cessing time, making it difficult to use them as real-time 
+decision support systems in clinical settings. Some meth-
+ods focus only on a single data modality (e.g., MRI only), 
+neglecting the combined use of different feature extraction 
+techniques and dimension reduction methods. Consider-
+ing these shortcomings, there is a need for a new method 
+that enables early and accurate diagnosis of Alzheimer’s 
+disease, while also offering high performance on multi-
+class data and operating quickly. Motivated by this, the 
+NCA-EVA method proposed in our study offers significant 
+improvements in both accuracy and processing time com-
+pared to existing approaches in the literature for multi-
+stage Alzheimer’s classification.
+
+Table 1   Related works
+
+Year
+
+Authors
+
+Study
+
+Dataset
+
+Accuracy
+
+Execution time (s)
+
+2024 [12]
+
+Prasath and Sumathi
+
+Pipelined LeNet (PLN)
+
+Kaggle Alzheimer’s clas-
+
+99.5%
+
+0.65
+
+2024 [13]
+
+Jianping Qiao et al
+
+Convolutional-Squeeze-
+
+Excitation-Softmax-NET 
+(CSES-NET)
+
+sification dataset (KACD)
+
+(2 classes)
+ADNI
+(2 classes)
+
+2024 [14]
+
+Peixin Lu et al
+
+2024 [15]
+
+T.S. Sasikala
+
+Hierarchical Attention-
+
+Based Multimodal Fusion 
+(HAMF) Model
+
+ADNI
+(2 classes)
+
+96.17%
+
+Not specified
+
+87.2%
+
+Not specified
+
+IRW-ASFCM and 2LS-
+
+WaveCNN-based CAD 
+system
+
+Custom collected dataset
+(3 classes)
+
+99.54%
+
+97.88
+
+2024 [16]
+
+Qing Zhao et al
+
+CAD systems
+
+Multi-modality (genetics, 
+
+65% (CAD)
+
+Not specified
+
+2024 [17]
+
+Sorour et al
+
+CNN-LSTM-With-Aug
+
+2024 [18]
+
+Wenchang Huang et al
+
+Deep Forest
+
+2024 [19]
+
+Khosro Rezaee and Min 
+
+CascadeNet
+
+Zhu
+
+2024 [20]
+
+Ishan Ayus and Deepak 
+
+CNN-Conv1D-LSTM and 
+
+Gupta
+
+2025 [21]
+
+K. Emily Esther Rani and 
+
+S. Baulkani
+
+Alp et al
+
+2024
+[22]
+
+HReENet
+(4 classes)
+ARSA-CA + pre-trained 
+
+SqueezeNet
+
+(4 classes)
+Vision Transformer 
+
+(ViT) + Time Series 
+Transformer (TST) (2 
+classes–4 classes)
+
+Proposed method
+
+NCA-EVA
+
+neuroimaging)
+
+(3 classes)
+ADNI
+(2 classes)
+Serum samples (NIR spec-
+
+troscopy)
+(3 classes)
+Figshare, Brazilian EEG
+(3 classes)
+Kaggle Alzheimer’s clas-
+
+sification dataset (KACD)
+
+99.92%
+
+Not specified
+
+98.67%
+
+Not specified
+
+98.84%, 97.78% Not specified
+
+99.97%
+
+Not specified
+
+ADNI
+
+98.4%
+
+Not specified
+
+ADNI
+(2 classes)
+ADNI
+(4 classes)
+2 classes
+4 classes
+
+99.048%
+
+Not specified
+
+99.014%
+
+Not specified
+
+99.87%
+98.97%
+
+0.74
+1.26
+
+ 
+Journal of Imaging Informatics in Medicine 
+
+Material and Method
+
+Dataset
+
+Alzheimer’s  disease  is  a  neurological  disorder  that  is 
+becoming more prevalent due to the aging global popula-
+tion, resulting in significant repercussions such as memory 
+impairment and cognitive decline. The accurate diagno-
+sis of the disease and its stage classification are crucial 
+for comprehending its progression and for implementing 
+suitable therapy and intervention strategies. Consequently, 
+brain images acquired by magnetic resonance imaging 
+(MRI) techniques serve as a significant data source for 
+identifying various phases of Alzheimer’s disease. The 
+dataset included in this research comprises images depict-
+ing four distinct stages of Alzheimer’s disease, systemati-
+cally classified and balanced to categorize the disease’s 
+symptoms [23]. The dataset was obtained from the pub-
+licly available Kaggle platform, where it is shared under 
+an open data usage license. Therefore, no ethical approval 
+was required for its use in this study.
+
+Fig. 1   Example MRI images 
+from the normal group, showing 
+typical brain structures used as 
+a baseline for detecting different 
+stages of Alzheimer’s disease
+
+The Alzheimer’s multi-class dataset is an open-source 
+collection of MRI scans depicting various phases of Alzhei-
+mer’s disease for diagnostic and classification purposes. This 
+multi-class dataset comprises around 44,000 MRI scans, 
+classified into four distinct categories based on the severity 
+of Alzheimer’s disease. This dataset, designed for training 
+and evaluating machine learning models, comprises MRI 
+images exclusively featuring brain tissue devoid of any non-
+cranial tissue components. Sample images of Alzheimer’s 
+stages contained in the dataset are shown in Fig. 1.
+
+The dataset comprises four primary files, each corre-
+sponding to a distinct severity class of Alzheimer’s disease. 
+Each folder comprises images corresponding to a particular 
+stage of the disease: NonDemented (12,800 data), VeryMild-
+Demented (11,200 data), MildDemented (10,000 data), and 
+ModerateDemented (10,000 data). NonDemented persons 
+exhibit no indications of dementia. VeryMildDemented has 
+a few symptoms and is in the preliminary phase of the con-
+dition. Mild dementia presents notable yet still moderate 
+symptoms of cognitive decline. Individuals with moder-
+ate dementia have more intense and intermediate signs of 
+
+the condition. All images in this collection are depicted as 
+“skull-stripped,” indicating that extraneous tissue and bone 
+features outside the cranial region have been eliminated from 
+the images. Exclusively incorporating brain tissue facilitates 
+model concentration and mitigates the impact of extraneous 
+information. The dimensions and resolution of the images 
+have probably been adjusted to ensure they are sufficiently 
+large for deep-learning models to analyze. Standardizing 
+MRI images facilitates data processing and integration into 
+the model.
+
+Feature Extraction with Vision Transformers (ViTs) 
+and EfficientNet
+
+In recent years, deep learning-based feature extraction meth-
+ods have significantly advanced medical image analysis and 
+have become essential in disease detection. Feature extrac-
+tion denotes the automated identification and extraction of 
+salient and significant characteristics from photographs. This 
+procedure is particularly crucial in the evaluation of MRI 
+images utilized in diagnosing neurodegenerative disorders, 
+including Alzheimer’s disease. Deep learning models’ fea-
+ture extraction capabilities offer a more thorough and accu-
+rate analysis than older methods, facilitating more efficient 
+identification of disease-specific visual biomarkers. In this 
+context, EfficientNet and ViT architectures illustrate two dif-
+ferent techniques for feature extraction.
+
+The EfficientNet architecture is a novel methodology for 
+deep learning, providing an innovative perspective on image 
+classification and feature extraction tasks. This architecture 
+enhances feature extraction efficiency compared to classic 
+models by employing a compound scaling strategy that opti-
+mally balances the network’s depth, width, and resolution. 
+MBConv (Mobile Inverted Bottleneck Convolution) blocks, 
+the fundamental component of EfficientNet, operate along-
+side  pointwise  convolution,  depthwise  convolution,  and 
+Squeeze-and-Excitation modules to effectively capture both 
+low-level and high-level image characteristics. This feature 
+extraction method is proficient in assessing intricate visual 
+structures and identifying significant landmarks.
+
+The feature extraction capabilities of EfficientNet arise 
+from the architecture’s novel topology. The composite scal-
+ing approach methodically adjusts the three essential dimen-
+sions of the model architecture (depth, width, and resolution), 
+enhancing the efficacy of each dimension’s contribution. In 
+contrast with traditional convolutional neural networks (CNN), 
+this method architecture preserves computational efficiency 
+while augmenting model size and generating more effective 
+feature representations. MBConv blocks effectively capture 
+both local and global information due to their bottleneck archi-
+tecture and inverted residual connections. Squeeze-and-Exci-
+tation modules provide channel-wise feature calibration, ena-
+bling the amplification of significant features while attenuating 
+
+Journal of Imaging Informatics in Medicine
+
+trivial ones. The amalgamation of these architectural elements 
+renders EfficientNet an exceptionally proficient model for fea-
+ture extraction.
+
+Vision Transformers employ a transformer-based design 
+instead of CNNs for computer vision tasks, where images are 
+divided into small patches and processed sequentially through 
+transformer layers [24]. A 224 × 224 pixel image is segmented 
+into 196 patches of 16 × 16 pixels, and positional data are 
+added to help the model understand the spatial relationships 
+between patches [25].
+
+The primary element of transformers is the multi-head self-
+attention mechanism [26]. This method acquires significant 
+information by focusing on various areas of the image. These 
+layers ascertain the interrelations among image segments and 
+progressively refine the derived attributes. 
+
+The ViT models employed in the study vary in size, each 
+optimized for a particular resolution and dimension (Fig. 2). 
+The study employs two distinct ViT architectures: ViT Base 
+16/32 and ViT Large 16/32. ViT Base is one of the funda-
+mental iterations within the ViT family. This model segments 
+the input image into small blocks of 16 × 16 and 32 × 32 and 
+processes each block through transformer layers. This model 
+possesses limited parameters and is efficient for small to 
+medium-sized datasets. It is mainly utilized in classification 
+tasks that require high precision but do not demand extensive 
+datasets. The ViT Large model is an expanded version of the 
+model. It is optimized for extensive datasets and incorporates 
+additional parameters.
+
+Feature Selection Algorithms
+
+Feature selection is an essential procedure for enhancing the 
+efficacy of machine learning models and reducing computing 
+complexity. This study employs three distinct feature selec-
+tion methods to efficiently identify high-dimensional features 
+extracted from brain MRI images and execute dimensionality 
+reduction. ElasticNet (ENet), NCA, and MRMR algorithms 
+each seek to uncover the most discriminative features in the 
+dataset through distinct mathematical methodologies and opti-
+mization strategies. This section will study in detail the theo-
+retical underpinnings, operational principles, and significance 
+of feature selection algorithms in the context of Alzheimer’s 
+categorization.
+
+Initially employed for feature selection, ENet is a robust 
+linear regression model that combines Lasso (L1) and Ridge 
+(L2) regressions. The mathematical representation of ENet 
+appears as follows:
+
+min(1∕(2n))
+
+𝐲 − 𝐗𝐰
+
+2 + 𝜆1
+
+2
+‖
+
+𝐰
+
+1 + 𝜆2
+‖
+
+𝐰
+
+2
+‖
+
+‖
+
+‖
+In  this  context,  ||w||₁  denotes  the  L1  norm  penalty, 
+||w||₂ 2 signifies the L2 norm penalty, and λ₁ and λ₂ are 
+the respective L1 and L2 regularization parameters. This 
+
+‖
+
+ 
+Journal of Imaging Informatics in Medicine 
+
+Fig. 2   The Vision Transformer (ViT) architecture illustrates the process of dividing MRI images into patches, embedding them, and extracting 
+features through transformer layers
+
+mathematical framework facilitates the selection of the 
+most  significant  features  from  high-dimensional  and 
+associated  data  while  simultaneously  managing  model 
+complexity.
+
+ENet  is  an  efficient  technique  for  diminishing  the 
+dimensionality of extensive feature sets, particularly from 
+deep learning architectures like Vision Transformer. The 
+L1 norm eliminates specific feature coefficients, whereas 
+the L2 norm maintains a balance among highly linked 
+features. This considerably decreases the amount of the 
+dataset and optimizes processing time while retaining clas-
+sification performance [27]. The characteristic of ENet 
+renders it an optimal pick for feature identification, par-
+ticularly in contexts involving high-dimensional datasets, 
+such as medical image analysis.
+
+NCA is a supervised dimensionality reduction technique 
+that improves classification performance by refining the 
+distance metrics among data items [28]. The algorithm’s 
+primary goal is to build a transformation matrix that maps 
+data into a lower-dimensional space while preserving class 
+associations [29].
+
+In its mathematical framework, for a dataset, X ∈ Rn × d, 
+NCA learns a linear transformation matrix A ∈ Rk × d that 
+maps data points from d-dimensional space to k-dimensional 
+space through yi = Axi. The probability of point i choosing 
+point j as a neighbor is defined as pij ∝ e^(− ∥yi − yj∥2). This 
+transformation maximizes the likelihood of correct classifi-
+cation based on neighborhood relationships.
+
+NCA’s  effectiveness  stems  from  its  ability  to  han-
+dle  high-dimensional  data  while  preserving  essential 
+
+class-specific  features.  It  finds  applications  in  various 
+domains, including image recognition, natural language 
+processing,  and  biological  data  analysis.  The  method 
+enhances feature representation by bringing same-class 
+data points closer while separating different classes [28, 
+29]. This approach particularly benefits distance-based 
+classification methods by creating an optimal framework 
+for accurate categorization, making it especially valuable 
+for complex datasets like medical imaging analysis.
+
+MRMR  is  a  practical  approach  for  feature  selection 
+grounded in two fundamental principles [30]. These con-
+cepts are characterized by maximum relevance and mini-
+mum  redundancy.  The  mathematical  representation  of 
+MRMR is articulated as follows:
+
+maxΦ(𝐃, 𝐑), Φ(𝐃, 𝐑) = V(𝐃) −W (𝐑)
+
+In  this  context,  V(D)  quantifies  the  significance  of 
+features in relation to the target variable, whereas W(R) 
+assesses the redundancy among the chosen features [31]. 
+These values are typically computed via the mutual infor-
+mation metric:
+
+V(𝐃) = (1∕
+W(𝐑) = �1∕
+
+) ∑ I(ﬁ, c)
+� ∑ I(ﬁ, fj)
+
+𝐒
+�
+𝐒
+�
+
+2
+�
+�
+
+where I(fi,c) signifies the mutual information between fea-
+ture fi and target class c, and I(fi, fj) denotes the mutual 
+information between features.
+
+MRMR is a proficient feature selection technique, par-
+ticularly  for  high-dimensional  datasets.  The  approach 
+
+enhances dataset size by picking features that exhibit high 
+correlation with the target variable while maintaining low 
+intercorrelation among themselves [30, 31]. This method 
+enhances model efficacy, decreases training duration, and 
+mitigates the likelihood of overfitting, particularly in high-
+dimensional data contexts like biological data analysis, pic-
+ture processing, and genetic research.
+
+Algorithms for Classifications
+
+In this study, the performance of different machine learn-
+ing algorithms for the classification of Alzheimer’s disease 
+is comparatively analyzed. Six distinct classification algo-
+rithms—support vector machine (SVM), gradient boosting 
+machine (GBM), XGBoost, random forest (RF), logistic 
+regression (LR), and k-nearest neighbors (KNN)—possess 
+unique mathematical underpinnings and operational prin-
+ciples. These algorithms have been chosen for their wide-
+spread use in the literature, their adaptability to different 
+data structures, and their reliable classification performance. 
+To assess the efficacy of each algorithm, particularly in sen-
+sitive domains like medical picture analysis, the primary 
+characteristics,  mathematical  principles,  and  classifica-
+tion methodologies of the algorithms will be scrutinized 
+comprehensively.
+
+SVM is a robust supervised learning method that identi-
+fies an ideal hyperplane to segregate data points with the 
+maximum margin [32]. The mathematical representation of 
+SVM is articulated as follows:
+
+min(1∕2)
+
+2 + CΣ𝜉i
+𝐰
+subject to: yi�𝐰 ⋅ xi + b� ≥ 1 − 𝜉i ve 𝜉i ≥ 0
+‖
+‖
+
+where w is the normal vector of the hyperplane, b is the shift 
+term, C is the regularization parameter, and ξᵢ is the slack 
+variable. Kernel functions are used for nonlinear problems:
+
+K(𝐱𝐢, 𝐗𝐣) = 𝜑(𝐱𝐢)
+
+⋅ 𝜑(𝐱𝐣)
+
+In this study, SVM was utilized to categorize high-dimen-
+sional brain MRI characteristics acquired from EfficientNet 
+and ViT models [32]. Kernel functions’ capacity to adeptly 
+manage nonlinear data structures has enhanced the algo-
+rithm’s efficacy, particularly in identifying various phases 
+of Alzheimer’s disease and categorizing nuanced morpho-
+logical alterations in brain images. The margin maximiza-
+tion strategy of SVM enhanced class separation, yielding 
+superior classification performance.
+
+Random forest (RF) is a powerful classification technique 
+that combines numerous decision trees with the notion of 
+ensemble learning [33, 34]. The mathematical structure of 
+RF is represented as follows:
+
+Journal of Imaging Informatics in Medicine
+
+}
+f rf(𝐱) =1∕B ∑
+i=1
+
+Bfi(𝐱)
+
+where B is the total number of trees and fᵢ(x) is the predic-
+tion of each tree. Majority voting is used for classification:
+
+}
+
+y= mode{fi(𝐱)}i=1B
+
+RF samples data for each tree using a bootstrap aggregat-
+
+ing (bagging) technique [35]:
+
+X∗ = {(xi∗
+
+i , yi∗
+
+i )}i=1, where (x∗
+
+i , yi∗
+
+}
+i ) ∼
+P
+
+This study demonstrated the successful utilization of RF 
+to classify features derived from EfficientNet and ViT mod-
+els. The primary advantage of the method is that each tree 
+is trained on distinct data subsets and determines outcomes 
+through majority voting [33–35]. This method prevents over-
+learning and ensures superior classification performance, 
+even  with  imbalanced  datasets.  Integrating  characteris-
+tics acquired from several views in medical image analy-
+sis allows the algorithm to yield dependable and uniform 
+outcomes.
+
+The other classifier model is the LR model. LR is a linear 
+model created to address classification issues, extensively 
+utilized in statistics and machine learning [36]. Logistic 
+regression is employed to forecast the likelihood of an event 
+transpiring and is especially effective in binary classifica-
+tion challenges. Notwithstanding the term “regression” in 
+its designation, its objective is to categorize data and predict 
+the class to which the data pertains rather than to estimate 
+continuous values. Logistic regression is appropriate for cat-
+egorization, in contrast to linear regression. Linear regres-
+sion forecasts the dependent variable as a continuous value; 
+nevertheless, this method is inappropriate for classification 
+problems, as the dependent variable is typically categorical 
+or binary. Logistic regression addresses this issue by con-
+structing a model from linear combinations of independent 
+variables and using a sigmoid function to convert the output 
+of a linear equation into a constrained range (between 0 and 
+1) [37]. This function generates numbers that can be read as 
+estimated probabilities, which are classified into categories 
+based on a specific threshold value.
+
+The sigmoid function is fundamental to logistic regres-
+sion. The sigmoid function generates classification predic-
+tions by constraining the model’s output within the range of 
+0 to 1 [38]. The sigmoid function is shown in Eq. 1.
+
+𝜎(z) =
+
+1
+1 + e−z …
+
+(1)
+
+In this equation, z is determined as a linear amalgama-
+tion of independent variables (e.g., z = w0 + w1 × 1 + w2 × 2 
++ … + wn × n). The sigmoid function transforms this linear 
+
+ 
+Journal of Imaging Informatics in Medicine 
+
+combination into a number ranging from 0 to 1. If the output 
+value exceeds 0.5, the model categorizes the input as one 
+class (e.g., 1); if it is below, it categorizes it as another class 
+(e.g., 0).
+
+Logistic regression, while primarily utilized for binary 
+classification, can also be employed for multiclass classifica-
+tion through methods such as one-vs-rest or softmax regres-
+sion. In the one-vs-rest methodology, each class is forecasted 
+in relation to the other classes using an individual binary 
+classification model. Softmax regression, conversely, iden-
+tifies the class with the highest probability by concurrently 
+calculating the probabilities for each class in multiclass clas-
+sifications. Logistic regression yields highly effective out-
+comes, particularly with linearly separable datasets. Logis-
+tic regression is both efficient and precise when the dataset 
+does not necessitate intricate border delineations for accurate 
+categorization. It is distinguished as an efficient classifica-
+tion model due to its lower processing demands compared 
+to more intricate methods. Logistic regression may exhibit 
+constrained efficacy on intricate and non-linear classification 
+problems due to its reliance on linear bounds; yet, it serves 
+as a robust model when linear precision is essential, estab-
+lishing a decision boundary suitable for the data.
+
+GBM is an effective machine learning system that mini-
+mizes  error  rates  and  enhances  prediction  accuracy  by 
+sequentially aggregating weak learners, typically decision 
+trees. Using a boosting strategy, GBM adds a new model 
+at each iteration by learning the faults  of  the preceding 
+model [39, 40]. During this procedure, model parameters 
+are refined by gradient descent, therefore minimizing the 
+overall error [41].
+
+The efficacy of GBM is contingent upon the precise cali-
+bration of parameters, including learning rate, tree quantity, 
+and depth. Each additional tree incrementally enhances the 
+model’s accuracy by assimilating the residual mistakes from 
+prior iterations. The algorithm proficiently comprehends 
+intricate data patterns and methodically minimizes errors, 
+particularly in high-dimensional datasets. Its proficiency in 
+managing data noise and superior generalization capabili-
+ties render it an exceptionally beneficial option for intricate 
+classification challenges.
+
+XGBoost is an enhanced iteration of the gradient boost-
+ing method, tailored for challenges necessitating superior 
+performance and accuracy [42]. Regularized learning and 
+gradient descent techniques define the approach. It has fea-
+tures including L1 and L2 regularization, parallel processing 
+capabilities, out-of-memory computation for extensive data-
+sets, and management of missing data. Using advanced tree 
+pruning mechanisms and growth algorithms, XGBoost [43] 
+minimizes needless complexity while maintaining appropri-
+ate tree depth.
+
+The algorithm’s success is contingent upon precisely 
+calibrating parameters like learning rate, maximum depth, 
+
+number of trees, and sampling rate. It is distinguished by its 
+capacity to proficiently identify data linkages and handle 
+missing data, particularly in intricate datasets. These attrib-
+utes render XGBoost a more advantageous choice compared 
+to conventional boosting algorithms.
+
+KNN is a supervised learning technique that classifies 
+data points based on their proximity to neighboring ones 
+[44]. The approach computes the distance of the data point 
+to be classified from other instances in the dataset and pre-
+dicts by assigning the majority class of the k-nearest neigh-
+bors. The efficacy of KNN is contingent upon the selection 
+of k and the employed distance metric (Euclidean, Manhat-
+tan, or Minkowski). In high-dimensional areas, algorithm 
+efficiency may diminish due to the “curse of dimensional-
+ity,” which can be mitigated using dimensionality reduction 
+techniques like PCA. Despite being a nonparametric and 
+straightforward model, it is computationally demanding with 
+large datasets. It is referred to as a “lazy learner” because it 
+conducts categorization during prediction instead of learning 
+during training. The efficacy of the model is contingent upon 
+data preprocessing and the caliber of the training data, with 
+performance enhancement achievable through approaches 
+like normalization.
+
+Proposed Method
+
+This work presents the NCA-Enhanced Voting Algorithm 
+for Alzheimer’s Classification (NCA-EVA), which intro-
+duces  a  novel  hybrid  methodology  that  enhances  fea-
+ture selection and classification techniques (Fig. 3). This 
+method is intended to effectively process and categorize 
+features obtained from any feature extraction methodology 
+and has two primary stages. Initially, the NCA method is 
+employed to identify the most distinguishing features from 
+the retrieved data. In the second stage, a Voting Classifier 
+comprising KNN, SVM, and RF algorithms is utilized to 
+categorize the chosen features. This method integrates the 
+feature selection efficacy of NCA with the classification 
+strength of the ensemble learning model to enhance clas-
+sification performance and optimize processing duration.
+
+The choice of algorithms employed in the NCA-EVA 
+technique was predicated on the strengths and benefits of 
+each algorithm. NCA is a feature selection approach tailored 
+for classification tasks, utilized during the feature selection 
+step. The primary rationale for selecting NCA is its capacity 
+to learn the distance metric among features by allocating a 
+weight to each feature. Thus, it can discern the characteris-
+tics that most effectively differentiate between classes and 
+execute dimensionality reduction proficiently. Furthermore, 
+in the experiments, the NCA algorithm achieved the most 
+favorable outcomes among several feature selection algo-
+rithms, resulting in its preference for the proposed strategy.
+
+Journal of Imaging Informatics in Medicine
+
+Fig. 3   Graphical abstract of the proposed NCA-EVA framework, showing the workflow from data preprocessing to feature extraction, feature 
+selection, and final classification
+
+Before model training, standard image preprocessing 
+steps  were  applied  to  ensure  consistency  and  improve 
+model  performance.  All  MRI  images  were  resized  to 
+224 × 224 pixels to match the input dimensions of the ViT 
+and EfficientNet architectures. Pixel values were normal-
+ized to a [0,1] range, and data augmentation techniques 
+such as horizontal and vertical flipping, random rotation, 
+and slight brightness adjustments were applied to increase 
+data diversity and reduce overfitting.
+
+The ensemble model incorporates three distinct algo-
+rithms (KNN, SVM, and RF) selected to mitigate each oth-
+er’s limitations. The KNN algorithm is a straightforward 
+and efficient classifier adept at identifying local patterns. 
+The rationale for using the KNN algorithm in the proposed 
+method is that it yields the most favorable outcomes in 
+the experimental results. SVM excels in high-dimensional 
+data and adeptly models intricate decision limits. Its resil-
+ience distinguishes RF from overfitting and its capacity 
+to assess feature significance. The other two chosen algo-
+rithms, SVM and RF, also showed efficacy in experimental 
+outcomes. The integration of these three algorithms with 
+
+the Voting Classifier enhances classification performance 
+by leveraging the characteristics of each method, resulting 
+in more reliability and balance.
+
+NCA, the first stage of the NCA-EVA method, is a met-
+ric learning approach for feature selection. NCA trans-
+forms features to maximize classification performance by 
+modeling each instance’s relationship with other instances 
+in a probabilistic framework. Using the Euclidean distance 
+between instances, the approach learns a transformation 
+matrix such that instances in the same class are close to 
+each other and instances in different classes are far apart.
+
+The basic equation of NCA is as follows:
+
+p(i → j) = exp�−
+
+Wx_i − Wx_j
+
+‖
+
+2
+
+‖
+
+�∕Σ−{k ≠ i}exp�−
+
+Wx_i − Wx_k
+
+2
+
+��
+
+‖
+
+�
+
+In this equation,
+
+–  p(i → j): the probability that instance i select instance j 
+
+as a neighbor
+
+–  W: learned transformation matrix
+–  x_i and x_j: sample pairs
+
+ 
+Journal of Imaging Informatics in Medicine 
+
+– 
+
+||Wx_i − Wx_j||2:  square  of  the  Euclidean  distance 
+between samples in transformed space
+
+–  Σ_{k ≠ i}: sum over all samples different from i
+–  exp: exponential function
+
+This probability function is optimized to maximize the 
+probability that instances in the same class are close to each 
+other. An optimal transformation in the feature space is 
+obtained by updating the W matrix in an iterative process.
+
+Min–Max normalization is utilized during the second 
+phase of the NCA-EVA methodology to standardize the 
+chosen characteristics. The normalization procedure seeks 
+to enhance classifier performance by transforming features 
+of  varying  scales  into  a  uniform  scale  within  the  range 
+[0,1]. Min–Max normalization executes a linear transfor-
+mation utilizing the minimum and maximum values of each 
+attribute.
+
+The fundamental equation of Min–Max normalization:
+
+x�_i = (x_i − x_ min)∕(x_ max −x_ min)
+
+x′_i = (x_i − x_min)/(x_max − x_min).
+In this equation,
+
+–  x′_i: normalized feature value
+–  x_i: original feature value
+–  x_min: minimum value of the property
+–  x_max: maximum value of the property
+
+As a result of this normalization process:
+
+•  All features are scaled in the range [0,1].
+•  The structure of the original distribution is preserved.
+•  Reduced impact of outliers.
+•  Features at different scales become comparable.
+
+The  concluding  phase  of  the  NCA-EVA  approach, 
+Ensemble Voting, is a soft voting technique that amalgam-
+ates the predictions of three distinct classifier algorithms: 
+KNN, SVM, and RF. This method involves each classifier 
+generating a probability estimate for a class, with the final 
+choice derived from the average of these probabilities. The 
+soft voting technique considers the predictive confidence of 
+each classifier, yielding a more dependable categorization.
+The  fundamental  equation  of  Ensemble  Voting 
+
+classification:
+P(y ∣ x) = (1∕M)Σ−[m = 1}∧MP−m(y ∣ x)
+
+In this equation,
+
+–  P(y|x): final probability of class y for instance x
+–  M: total number of classifiers (M = 3)
+
+–  P_m(y|x): m. classifier’s probability estimate of class y 
+
+for sample x
+
+–  Σ: sum over all classifiers
+
+Final classification decision:
+
+̂y = argmax_y P(y
+
+x)
+
+|
+
+where:
+
+–  ŷ: predicted class label
+–  argmax_y: operator that selects the class label with the 
+
+highest probability
+
+–  P(y|x): ensemble probability calculated for each class
+
+This voting mechanism leverages the strengths of each 
+classifier, resulting in a more robust and reliable classifica-
+tion performance.
+
+This ensemble model was implemented using soft voting. 
+Soft voting calculates the probability of each model belong-
+ing to a class and predicts the class with the highest prob-
+ability. Thus, the strong classification features of each model 
+are exploited, and errors are minimized. To improve this 
+method’s overall performance, prediction with soft voting, 
+which considers the information provided by each model 
+in classification, provides more reliable results in a serious 
+classification problem such as Alzheimer’s disease. The 
+process of multiclass classification using feature extraction 
+and a voting ensemble model is presented as pseudo-code 
+in Table 2.
+
+Experimental Results
+
+This paper presents the results of several experiments and 
+the proposed NCA-EVA method to improve the classifica-
+tion performance of Alzheimer’s disease. The studies are 
+discussed in two parts. In the first part, 66 models are trained 
+on four-class data. Then, the NCA-EVA method is applied 
+to 6 models with two-class data, and results are obtained 
+for comparison with two-class studies in the literature. To 
+ensure the robustness and reliability of the proposed method, 
+a fivefold cross-validation strategy was applied. The data-
+set was randomly partitioned into five equal subsets, where 
+four folds were used for training and one fold for testing in 
+each iteration. This process was repeated five times, and the 
+final performance metrics were reported as the average of 
+these iterations. The dataset used in this study is balanced 
+across the four classes, thereby minimizing the risk of class 
+imbalance. Additionally, the use of cross-validation helped 
+reduce the risk of overfitting and ensured that the reported 
+results accurately reflect the generalization performance of 
+the model.
+
+Table 2   Pseudo-code of the proposed method
+
+Journal of Imaging Informatics in Medicine
+
+Table 3   Traditional  classification  methods:  accuracy  and  processing 
+time comparison
+
+Accuracy (%)
+
+Time (s)
+
+EfficientNet_V2_L
+EfficientNet_B7
+ViT-B/16
+ViT-B/32
+ViT-L/16
+ViT-L/32
+
+78.37
+81%
+62.11
+40.43
+63.72
+90.25
+
+18,867
+17,261
+6048
+1668
+35,100
+3780
+
+First,  the  traditional  classification  process  was  per-
+formed  with  the  most  complex  models  of  EfficientNet 
+architecture (EfficientNet_B7 and EfficientNet_v2_L) and 
+ViT models, and the results are given in Table 3.
+
+Table  3  compares  the  performance  of  various  deep 
+learning models in classifying Alzheimer’s disease. The 
+ViT-L/32 model attains its highest performance, with an 
+accuracy of 90.25% in 3780 s. The EfficientNet models (B7 
+and V2/L) had commendable accuracy rates of 81% and 
+78.37%, respectively, although they necessitated signifi-
+cantly longer processing times of 17,261 and 18,867 s. ViT 
+models generally yield results more rapidly; nevertheless, 
+
+the low accuracy of 40.43% for ViT-B/32 suggests that 
+both processing time and the accuracy-duration trade-off 
+must be evaluated in model selection.
+
+This study observed that the most successful result was 
+obtained with the ViT-L/32 model when looking at tradi-
+tional classification models. For this reason, this model was 
+used for feature extraction in the rest of the study, and the 
+results are given in Table 4.
+
+Table 4 compares the performance of various classifi-
+cation methods utilizing characteristics derived from the 
+ViT-L/32 model. The KNN method had the highest perfor-
+mance, with an accuracy of 89.01%, alongside precision, 
+recall, and F1-score of 89%, and was the most rapid model, 
+requiring merely 2.81 s for processing. The XGBoost algo-
+rithm achieved the second-highest accuracy at 87.74%, fol-
+lowed by SVM at 83.94%, RF at 83.48%, and LR at 82.17%, 
+demonstrating commendable performance. The GBM algo-
+rithm had the lowest performance, achieving an accuracy 
+of 73.65%. Regarding processing time, SVM is the slow-
+est model at 2243.57 s, while KNN is notably rapid. The 
+findings indicate that the features derived from ViT-L/32 
+yield effective outcomes for both accuracy and speed, mainly 
+when utilized with algorithms like KNN and XGBoost.
+
+Table 4   Effect of NCA-selected 
+ViT-L/32 features on machine 
+learning models: accuracy and 
+time evaluation
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+SVM
+KNN
+RF
+LR
+GBM
+XGBoost
+
+83.94
+89.01
+83.48
+82.17
+73.65
+87.74
+
+84
+89
+83
+82
+73
+88
+
+84
+89
+83
+82
+74
+88
+
+84
+89
+83
+82
+73
+88
+
+2243.57
+2.81
+168.62
+59.44
+100.42
+97.14
+
+ 
+Journal of Imaging Informatics in Medicine 
+
+As seen in Table 4, the most successful result is obtained 
+with the feature extraction result of the ViT-L/32 model. 
+For this reason, in the rest of the study, the features obtained 
+with the ViT-L/32 model were selected as the most meaning-
+ful ones with different feature selection algorithms, and the 
+classification process was performed. First, the most sig-
+nificant features extracted with the ViT-L/32 model were 
+selected with NCA, and classification was performed using 
+different classification algorithms.
+
+The outcomes from implementing NCA feature selection 
+demonstrate considerable enhancements relative to the pre-
+ceding table (Table 5). The KNN method exhibits the most 
+significant enhancement, with its accuracy rate rising from 
+89.01 to 97.86%, and it remains the swiftest model, requir-
+ing 3.41 s for processing. The XGBoost algorithm demon-
+strated a notable enhancement, with an accuracy of 91.72% 
+and attaining 92% across all measures (precision, recall, 
+F1-score). The RF algorithm had the third-highest accuracy 
+at 88.19%, whereas the other algorithms exhibited overall 
+enhancements in performance. Only the processing duration 
+of the GBM algorithm significantly increased to 5869.45 s. 
+The results indicate that the NCA feature selection method 
+enhances the quality of features derived from ViT-L/32 and 
+
+significantly improves classification performance. In the rest 
+of the study, the most significant features extracted with the 
+ViT-L/32 model were selected with ENet and then classified 
+with different classification algorithms.
+
+Looking at the results obtained after using the ENet fea-
+ture selection method in Table 6, the KNN algorithm showed 
+the best performance with an accuracy rate of 90.45% and 
+90% values in all metrics. It worked very fast, with a pro-
+cessing time of 10.31 s. The XGBoost algorithm performed 
+second best with an accuracy of 87.57%, while the RF algo-
+rithm ranked third with 83.84%. The GBM algorithm per-
+formed the worst, with an accuracy of 43.25% and unbal-
+anced precision-recall values (41% and 55%), and was the 
+slowest model, with a processing time of 1104.60 s. These 
+results show that the ENet feature selection method performs 
+poorly compared to NCA, especially in the KNN algorithm, 
+where there is a decrease of about 7% compared to the accu-
+racy of 97.86% obtained with NCA.
+
+Finally, the most significant features extracted with the 
+ViT-L/32 model were selected with MRMR and then classi-
+fied with different classification algorithms (Table 7).
+
+As seen in Table 7, after using the MRMR feature selec-
+tion method, the KNN algorithm performed the best with an 
+
+Table 5   Effect of NCA-selected 
+ViT-L/32 features on machine 
+learning models: accuracy and 
+time evaluation
+
+Table 6   Effect of ENet-selected 
+ViT-L/32 features on machine 
+learning models: accuracy and 
+time evaluation
+
+Table 7   Effect of MRMR-
+selected ViT-L/32 features 
+on machine learning models: 
+accuracy and time evaluation
+
+SVM
+KNN
+RF
+LR
+GBM
+XGBoost
+
+SVM
+KNN
+RF
+LR
+GBM
+XGBoost
+
+SVM
+KNN
+RF
+LR
+GBM
+XGBoost
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+83.65
+97.86
+88.19
+82.25
+78.07
+91.72
+
+84
+98
+88
+82
+78
+92
+
+84
+98
+88
+82
+78
+92
+
+84
+98
+88
+82
+78
+92
+
+1723.03
+3.41
+49.40
+45.09
+5869.45
+77.11
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+82.08
+90.45
+83.84
+80.67
+43.25
+87.57
+
+82
+90
+84
+81
+41
+88
+
+83
+90
+84
+81
+55
+88
+
+82
+90
+84
+81
+35
+88
+
+536.99
+10.31
+146.28
+35.73
+1104.60
+52.50
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+75.68
+88
+83.48
+82.31
+71.75
+85.36
+
+76
+88
+83
+82
+71
+85
+
+76
+88
+83
+82
+72
+85
+
+76%
+88%
+83%
+82%
+71%
+85%
+
+588.04
+1.35
+358.42
+236.45
+2050.64
+188.08
+
+Journal of Imaging Informatics in Medicine
+
+accuracy of 88% and consistent values of 88% in all metrics 
+(precision, recall, F1-score). It was the fastest model, with 
+a processing time of 1.35 s. The XGBoost algorithm per-
+formed second best with an accuracy of 85.36%, while the 
+RF algorithm ranked third with 83.48%. GBM and SVM 
+algorithms demonstrated lower performance, with accuracy 
+rates of 71.75% and 75.68%, respectively. Notably, GBM, 
+the slowest model, required a processing time of 2050.64 s. 
+These results show that the MRMR feature selection method 
+performs poorly compared to NCA and ENet methods, espe-
+cially in the KNN algorithm, which gives the best result 
+compared to the accuracy rates of 97.86% obtained with 
+NCA and 90.45% obtained with ENet.
+
+These studies show that the most successful result is 
+obtained when feature selection is performed with NCA. 
+After this step, the performance of different feature extrac-
+tion and classification models of the NCA feature selection 
+model is analyzed and compared to the proposed NCA-
+EVA model. First, the ViT-B/16 model was used for feature 
+extraction (Table 8).
+
+As shown in Table 8, in the comparative analysis of the 
+features extracted from the ViT-B/16 model, the proposed 
+NCA-EVA method showed the highest performance with an 
+accuracy of 98.22% and 98% in all metrics. It worked very 
+fast, with a processing time of only 4.69 s. The KNN algo-
+rithm performed second best with an accuracy of 97.58%, 
+while XGBoost ranked third with 91.86%. RF (86%), SVM 
+(82.60%), and LR (82.12%) algorithms performed moder-
+ately, while the GBM algorithm performed the worst with 
+
+an accuracy of 77.32% and was the slowest model with a 
+processing time of 6348.82 s. These results clearly show that 
+the proposed NCA-EVA method outperforms other classifi-
+cation algorithms in terms of both accuracy and processing 
+time.
+
+In the rest of the study, the ViT-B/32 model was used 
+for feature extraction (Table 9). In the comparative analy-
+sis of the features extracted from the ViT-B/32 model, the 
+proposed NCA-EVA method performed the best with an 
+accuracy of 97.78% and 98% in all metrics. It was the fast-
+est model, with a processing time of only 1.85 s. The KNN 
+algorithm performed the second best with an accuracy of 
+96.7%, while RF and XGBoost algorithms ranked third and 
+fourth with close accuracy of 88.52% and 88.33%, respec-
+tively. SVM (75.81%), LR (80.15%), and GBM (74.05%) 
+algorithms showed lower performance, especially GBM, 
+which was the slowest model with a processing time of 
+1905.14 s. These results show that the NCA-EVA method 
+outperforms other classification algorithms in terms of both 
+accuracy and processing time when feature extraction is per-
+formed with the ViT-B/32 model.
+
+In the rest of the study, the ViT-L/16 model was used 
+for feature extraction (Table 10). In the comparative analy-
+sis of the features extracted from the ViT-L/16 model, the 
+proposed NCA-EVA method performed the best with an 
+accuracy of 98.05% and 98% in all metrics, achieving a 
+speedy processing time of 5.93 s. The KNN algorithm per-
+formed second best with an accuracy of 96.64%, followed 
+by XGBoost with 89.32% and RF with 86.70%. The LR 
+
+Table 8   Comparison of ViT-
+B/16 feature extraction and 
+NCA feature selection across 
+classifiers with results of the 
+proposed NCA-EVA method
+
+Table 9   Comparison of ViT-
+B/32 feature extraction and 
+NCA feature selection across 
+classifiers with results of the 
+proposed NCA-EVA method
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+SVM
+KNN
+RF
+LR
+GBM
+XGBoost
+NCA-EVA (pro-
+posed method)
+
+82.60
+97.58
+86
+82.12
+77.32
+91.86
+98.22
+
+83
+98
+86
+82
+77
+92
+98
+
+83
+98
+86
+82
+77
+92
+98
+
+83
+98
+86
+82
+77
+92
+98
+
+1895.54
+26.68
+85.06
+44.54
+6348.82
+58.62
+4.69
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+SVM
+KNN
+RF
+LR
+GBM
+XGBoost
+NCA-EVA (pro-
+posed method)
+
+75.81
+96.7
+88.52
+80.15
+74.05
+88.33
+97.78
+
+76
+97
+89
+80
+74
+88
+98
+
+76
+97
+89
+80
+74
+88
+98
+
+76
+97
+88
+80
+74
+88
+98
+
+1005.41
+28
+159.14
+46.03
+1905.14
+15.82
+1.85
+
+ 
+Journal of Imaging Informatics in Medicine 
+
+(81.52%), SVM (76.70%), and GBM (75.19%) algorithms 
+performed worse, especially GBM, which was the slowest 
+model with a processing time of 1911.53 s. These results 
+show that the NCA-EVA method outperforms the other clas-
+sification algorithms in terms of accuracy and processing 
+time when feature extraction is performed with the ViT-L/16 
+model. This model gives consistent results with other ViT 
+models.
+
+In the rest of the study, the ViT-L/32 model was used for 
+feature extraction. As shown in Table 11, in the comparative 
+analysis of the features extracted from the ViT-L/32 model, 
+the proposed NCA-EVA method showed the highest perfor-
+mance with an accuracy of 98.97% and 99% in all metrics. 
+It was the fastest model, with a processing time of 1.26 s. 
+The KNN algorithm performed second best with an accu-
+racy of 97.33% and metric values of 97%. XGBoost and RF 
+performed well with 91.72% and 88.19%, respectively, while 
+
+SVM (83.65%), LR (82.25%), and GBM (78.07%) algo-
+rithms achieved lower accuracy rates. The GBM algorithm 
+was the slowest model, with a processing time of 5869.45 
+s. These results clearly show that the NCA-EVA method 
+provides a significant advantage over all other classification 
+algorithms in terms of accuracy and processing time when 
+used for feature extraction of the ViT-L/32 model.
+
+In another study phase, the EfficientNet_B7 model was 
+used for feature extraction. As shown in Table 12, in the 
+comparative  analysis  of  the  features  extracted  from  the 
+EfficientNet_B7 model, this time, the KNN algorithm per-
+formed the best with an accuracy of 98.55% and 99% on all 
+metrics. The proposed NCA-EVA method performed second 
+best with an accuracy of 97.86% and 98% on all metrics, but 
+with a processing time of 3.41 s, much faster than KNN’s 
+25.57 s. XGBoost and RF performed well with 91.10% and 
+89.20%, respectively, while SVM (75.41%), LR (74.41%), 
+
+Table 10   Comparison of ViT-
+L/16 feature extraction and 
+NCA feature selection across 
+classifiers with results of the 
+proposed NCA-EVA method
+
+Table 11   Comparison of ViT-
+L/32 feature extraction and 
+NCA feature selection across 
+classifiers with results of the 
+proposed NCA-EVA method
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+SVM
+KNN
+RF
+LR
+GBM
+XGBoost
+NCA-EVA (pro-
+posed method)
+
+76.70
+96.64
+86.70
+81.52
+75.19
+89.32
+98.05
+
+77
+97
+87
+81
+75
+89
+98
+
+77
+97
+87
+82
+75
+89
+98
+
+77
+97
+87
+81
+75
+89
+98
+
+872.48
+25.15
+48.28
+46.70
+1911.53
+16.95
+5.93
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+SVM
+KNN
+RF
+LR
+GBM
+XGBoost
+NCA-EVA (pro-
+posed method)
+
+83.65
+97.33
+88.19
+82.25
+78.07
+91.72
+98.97
+
+84
+97
+88
+82
+78
+92
+99
+
+84
+97
+88
+82
+78
+92
+99
+
+84
+97
+88
+82
+78
+92
+99
+
+1723.03
+25.02
+49.40
+45.09
+5869.45
+77.11
+1.26
+
+Table 12   Comparison of 
+EfficientNet_B7 feature 
+extraction and NCA feature 
+selection across classifiers with 
+results of the proposed NCA-
+EVA method
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+SVM
+KNN
+RF
+LR
+GBM
+XGBoost
+NCA-EVA (pro-
+posed method)
+
+75.41
+98.55
+89.20
+74.41
+73.92
+91.10
+97.86
+
+75
+99
+89
+74
+73
+91
+98
+
+75
+99
+89
+74
+74
+91
+98
+
+75
+99
+89
+74
+74
+91
+98
+
+1405.24
+25.57
+78.17
+14.91
+1903.89
+16.25
+3.41
+
+and GBM (73.92%) algorithms achieved lower accuracy 
+rates. The GBM algorithm was the slowest model, with a 
+processing time of 1903.89 s. These results show that the 
+KNN and NCA-EVA methods are much more successful 
+than other classification algorithms when used in the fea-
+ture extraction of the EfficientNet_B7 model. At the same 
+time, NCA-EVA provides a significant advantage in terms 
+of speed.
+
+Finally, the EfficientNet_v2_L model is used for feature 
+extraction. Looking at Table 13, the comparative analysis 
+of the features extracted from the EfficientNet_v2_L model 
+shows a significant decrease in the performance of all mod-
+els. The NCA-EVA method demonstrated the highest perfor-
+mance, achieving an accuracy of 42.5% and 42% across all 
+metrics, and was one of the fastest models, with a processing 
+time of 8.23 s. The RF algorithm performed close to NCA-
+EVA with 42.82%, while XGBoost was the third best with 
+41.81%. KNN (39.76%), GBM (38.64%), SVM (37.88%), 
+and LR (37.58%) algorithms showed meager accuracy rates. 
+The GBM algorithm was again the slowest model, with a 
+processing time of 1920.62 s. These results clearly show that 
+the EfficientNet_v2_L model is unsuitable for feature extrac-
+tion and performs much worse than the previous models.
+
+When the studies in the literature are examined, data 
+are generally divided into two classes. For this reason, the 
+proposed NCA-EVA method was finally used on two-class 
+Alzheimer’s data, and the results are given in Table 14.
+
+According to the results presented in Table 14, the NCA-
+EVA method was tested on two classes of Alzheimer’s data 
+
+Journal of Imaging Informatics in Medicine
+
+with different feature extraction models. The EfficientNet_
+B7 model performed the best with an accuracy of 99.93% 
+and very high values in all metrics (precision: 99.95%, 
+recall: 99.90%, F1-score: 99.93%). ViT-B/16 and ViT-L/32 
+performed second best with 99.87% accuracy, while ViT-
+L/16 and ViT-B/32 performed similarly well with 99.85% 
+and 99.67%, respectively. The EfficientNet_v2_L model, 
+on the other hand, performed significantly worse than the 
+other models, with an accuracy of 72.57%. Regarding pro-
+cessing time, all models (except EfficientNet_B7) produced 
+speedy results, running in under 1 s. These results show 
+that the proposed NCA-EVA method performs well in two-
+class Alzheimer’s classification, especially with Efficient-
+Net_B7 and ViT models.
+
+When the results of all experimental studies are evalu-
+ated, it is seen that the proposed NCA-EVA method achieves 
+the best performance with the ViT-L/32 model. In this com-
+bination, the NCA-EVA method achieved 98.97% accuracy, 
+99% precision, recall, and F1-score values, and a processing 
+time of only 1.26 s. In tests with different feature extrac-
+tion  models  (ViT-B/16,  ViT-B/32,  ViT-L/16,  Efficient-
+Net_B7), NCA-EVA consistently achieved accuracy rates 
+in the range of 97–98%, outperforming traditional machine 
+learning algorithms (SVM, KNN, RF, LR, GBM, XGBoost) 
+in terms of both accuracy and processing time. Especially 
+in computation time, NCA-EVA runs in the range of 1–8 
+s compared to 1900–6000 s for GBM, demonstrating the 
+computational efficiency of the method. When only the 
+EfficientNet_v2_L model was used, the performance of all 
+algorithms decreased significantly (around 42%), showing 
+the importance of feature extraction model selection.
+
+Table 13   Comparison of 
+EfficientNet_v2_L feature 
+extraction and NCA feature 
+selection across classifiers with 
+results of the proposed NCA-
+EVA method
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+SVM
+KNN
+RF
+LR
+GBM
+XGBoost
+NCA-EVA (pro-
+posed method)
+
+37.88
+39.76
+42.82
+37.58
+38.64
+41.81
+42.5
+
+36
+40
+42
+36
+38
+41
+42
+
+38
+40
+43
+38
+39
+42
+42
+
+36
+39
+42
+36
+37
+41
+42
+
+14,504.73
+10.12
+82.81
+14.80
+1920.62
+52.44
+8.23
+
+Table 14   Results of 
+classification of different feature 
+extraction models with NCA-
+EVA
+
+Accuracy (%)
+
+Precision (%)
+
+Recall (%)
+
+F1-score (%)
+
+Time (s)
+
+EfficientNet_B7
+EfficientNet_v2_L
+ViT-B/16
+ViT-B/32
+ViT-L/16
+ViT-L/32
+
+99.93
+72.57
+99.87
+99.67
+99.85
+99.87
+
+99.95
+73
+99.7
+99.95
+99.99
+99.9
+
+99.90
+73
+99.99
+99.31
+99.65
+99.8
+
+99.93
+73
+99.85
+99.63
+99.83
+99.85
+
+0.85
+6.23
+0.84
+0.83
+0.79
+0.74
+
+ 
+Journal of Imaging Informatics in Medicine 
+
+Conclusion and Discussion
+
+In  this  study,  we  proposed  NCA-EVA,  an  approach 
+designed to classify different stages of Alzheimer’s dis-
+ease with high accuracy and exceptionally short process-
+ing time. The method effectively addresses several key 
+limitations of existing approaches in multi-stage Alzhei-
+mer classification. Using a four-class dataset, our model 
+achieved  an  accuracy  of  98.97%  in  distinguishing  No 
+Dementia, Very Mild Dementia, Mild Dementia, and Mod-
+erate Dementia. When reduced to a two-class problem, the 
+accuracy further increased to 99.87%, demonstrating the 
+robustness and adaptability of the proposed framework. 
+Moreover, NCA-EVA achieved these results with a pro-
+cessing time that was approximately 1200 times faster than 
+traditional NCA-based methods, completing inference in 
+just 1.26 s. This computational efficiency highlights its 
+potential for real-time clinical deployment as a decision 
+support system.
+
+When compared with previous studies, our results repre-
+sent a significant advancement. For instance, Sasikala et al. 
+[15] reported an accuracy of 99.26% for a binary classifica-
+tion problem using a deep CNN. In contrast, our method 
+achieved 99.87%, offering a slight but consistent improve-
+ment with far greater processing speed. Other ViT-based 
+studies, such as Xin et al. [18] and Soundarya et al. [19], 
+reported accuracy rates in the range of 90–96% for multi-
+class Alzheimer classification. In contrast, our four-class 
+model reached 98.97%, surpassing these benchmarks. This 
+demonstrates that combining advanced feature extraction 
+techniques with the hybrid NCA-EVA strategy provides a 
+clear performance benefit over single-model approaches. 
+The improvement is not only numerical but also methodo-
+logical, as our method integrates the strengths of multiple 
+classifiers while drastically reducing computational costs.
+
+The clinical relevance of these findings is substantial. 
+Alzheimer’s disease diagnosis is often time-consuming and 
+relies heavily on expert interpretation of MRI scans. The 
+ability of NCA-EVA to deliver near-instant, highly accu-
+rate predictions can support neurologists and neuroradiolo-
+gists by reducing diagnostic workload and enabling earlier 
+interventions. For example, in busy hospital environments, 
+the model could serve as a real-time triage tool, quickly 
+identifying cases requiring urgent follow-up. Furthermore, 
+the extremely short runtime ensures that the method can be 
+integrated into clinical workflows without adding delays, 
+which is particularly important for screening programs and 
+resource-limited healthcare settings. These advantages high-
+light the translational potential of our work from computa-
+tional research to real-world medical applications.
+
+Despite  these  promising  results,  several  limitations 
+should be acknowledged. First, the dataset used in this 
+
+study consists of 44,000 MRI slices, which represent mul-
+tiple images from a smaller group of patients rather than 
+44,000 unique individuals. Although the data provider 
+prepared the dataset in a pre-balanced and pre-shuffled 
+format to minimize overlap, there remains a possibility 
+of correlation between slices from the same patient. This 
+could introduce bias if images from one patient were inad-
+vertently distributed across training, validation, and test 
+sets. While this risk is expected to have minimal effect due 
+to the balanced nature of the dataset and the comparative 
+focus of this study, it remains a methodological limitation. 
+Future studies will explicitly apply patient-level splitting 
+to ensure generalizability further and reduce potential bias.
+Second,  this  study  did  not  utilize  a  real-world,  inde-
+pendent external dataset for validation. While the proposed 
+method demonstrates exceptional performance on the cur-
+rent dataset, independent validation using diverse, real-world 
+clinical data is essential before clinical deployment. Addi-
+tionally, no direct collaboration with clinicians or neurora-
+diologists was conducted during this study, which will be 
+addressed in future work by incorporating expert feedback 
+and clinical test scenarios.
+
+In  conclusion,  the  NCA-EVA  method  emerges  as  a 
+highly accurate, efficient, and clinically relevant solution 
+for the early detection and staging of Alzheimer’s disease. 
+Compared to conventional machine learning algorithms 
+and existing deep learning models, it provides a substan-
+tial reduction in processing time and sets a new benchmark 
+for multi-class Alzheimer classification. By addressing the 
+limitations noted above—particularly through patient-level 
+data handling and external validation—this approach has the 
+potential to be integrated into clinical diagnostic pipelines. 
+Beyond  Alzheimer’s  disease,  the  underlying  framework 
+can be extended to other neurodegenerative conditions and 
+complex medical imaging challenges, advancing the field of 
+AI-driven healthcare diagnostics.
+
+Data Availability  The data supporting this study’s findings are available 
+on request from the corresponding author. The data are not publicly 
+available due to privacy or ethical restrictions.
+
+Declarations 
+
+Conflict of Interest  The authors declare no competing interests.
+
+References
+
+  1.  Wilson R.S., et al., "Cognitive decline and survival in Alzheimer’s 
+disease," International Journal of Geriatric Psychiatry, vol. 21, 
+no. 4, pp. 356–362, Jan. 2006. https:// doi. org/ 10. 1002/ gps. 1472
+
+  2.  Planche V., et al., "Structural progression of Alzheimer’s disease 
+over decades: the MRI staging scheme," Brain Communications, 
+
+vol. 4, no. 3, Apr. 2022. https:// doi. org/ 10. 1093/ brain comms/ fcac1 
+09
+
+  3.  Acharya U.R., et al., "Automated detection of Alzheimer’s disease 
+using brain MRI images – A study with various feature extrac-
+tion techniques," Journal of Medical Systems, vol. 43, no. 9, Aug. 
+2019. https:// doi. org/ 10. 1007/ s10916- 019- 1428-9
+
+  4.  Alzheimer’s Disease International, "The 35th Global Conference 
+of Alzheimer’s Disease International took place on 9th-11th June 
+2022," Alzheimer’s Disease International, 2022. https:// www. alz-
+int. org/ what- we- do/ adi- confe rence/ previ ous- inter  natio nal- confe 
+rences/ adi- confe rence- 2022/
+
+  5.  Selkoe D.J., Hardy J., "The amyloid hypothesis of Alzheimer’s 
+disease at 25 years," EMBO Molecular Medicine, vol. 8, no. 6, 
+pp. 595–608, Mar. 2016. https:// doi. org/ 10. 15252/ emmm. 20160 
+6210
+
+  6.  Jack C.R., Holtzman D.M., "Biomarker modeling of Alzheimer’s 
+disease,"  Neuron,  vol.  80,  no.  6,  pp.  1347–1358,  Dec.  2013. 
+https:// doi. org/ 10. 1016/j. neuron. 2013. 12. 003
+
+  7.  Frisoni G.B., Fox N.C., Jack C.R., Scheltens P., Thompson P.M., 
+"The clinical use of structural MRI in Alzheimer disease," Nature 
+Reviews Neurology, vol. 6, no. 2, pp. 67–77, Feb. 2010. https:// 
+doi. org/ 10. 1038/ nrneu rol. 2009. 215
+
+  8.  Esteva A., et al., "A guide to deep learning in healthcare," Nature 
+Medicine, vol. 25, no. 1, pp. 24–29, Dec. 2018. https:// doi. org/ 10. 
+1038/ s41591- 018- 0316-z
+
+  9.  Bhandarkar A., Naik P., Vakkund K., Junjappanavar S., Bakare 
+S., Pattar S., "Deep learning based computer aided diagnosis of 
+Alzheimer’s disease: a snapshot of last 5 years, gaps, and future 
+directions," Artificial Intelligence Review, vol. 57, no. 2, Feb. 
+2024. https:// doi. org/ 10. 1007/ s10462- 023- 10644-8
+
+ 10.  Shanmugavadivel K., Sathishkumar V.E., Cho J., Subramanian 
+M., "Advancements in computer-assisted diagnosis of Alzhei-
+mer’s disease: A comprehensive survey of neuroimaging methods 
+and AI techniques for early detection," Ageing Research Reviews, 
+vol. 91, p. 102072, Sep. 2023. https:// doi. org/ 10. 1016/j. arr. 2023. 
+102072
+
+ 11.  Laske C., et al., "Innovative diagnostic tools for early detection of 
+Alzheimer’s disease," Alzheimer's & Dementia, vol. 11, no. 5, pp. 
+561–578, Nov. 2014. https:// doi. org/ 10. 1016/j. jalz. 2014. 06. 004
+
+ 12.  Prasath T., Sumathi V., "Pipelined deep learning architecture for 
+the detection of Alzheimer’s disease," Biomedical Signal Pro-
+cessing and Control, vol. 87, p. 105442, 2024. https:// doi. org/ 10. 
+1016/j. bspc. 2023. 105442
+
+ 13.  Qiao J., Zhang M., Fan Y., Fang K., Zhao X., Wang S., Wang 
+Z., "Deep neural network CSES-NET and multi-channel feature 
+fusion for Alzheimer's disease diagnosis," Biomedical Signal Pro-
+cessing and Control, vol. 87, p. 105482, 2024. https:// doi. org/ 10. 
+1016/j. bspc. 2023. 105482
+
+ 14.  Lu P., Hu L., Mitelpunkt A., Bhatnagar S., Lu L., Liang H., "A 
+hierarchical attention-based multimodal fusion framework for 
+predicting the progression of Alzheimer’s disease," Biomedical 
+Signal Processing and Control, vol. 88, p. 105669, 2024. https:// 
+doi. org/ 10. 1016/j. bspc. 2023. 105669
+
+ 15.  Sasikala T.S., "A CAD system design using iteratively reweighted 
+fuzzy c-means and deep tree training for Alzheimer's disease 
+diagnosis," Biomedical Signal Processing and Control, vol. 88, 
+p. 105655, 2024. https:// doi. org/ 10. 1016/j. bspc. 2023. 105655
+ 16.  Zhao Q., Xu H., Li J., Rajput F.A., Qiao L., "The application of 
+artificial intelligence in Alzheimer's research," Tsinghua Science 
+and Technology, vol. 29, no. 1, pp. 13–33, 2023. https:// doi. org/ 
+10. 26599/ TST. 2023. 90100 89
+
+ 17.  Sorour S.E., Abd El-Mageed A.A., Albarrak K.M., Alnaim A.K., 
+Wafa A.A., El-Shafeiy E., "Classification of Alzheimer’s disease 
+using MRI data based on deep learning techniques," Journal of 
+King Saud University-Computer and Information Sciences, vol. 
+
+Journal of Imaging Informatics in Medicine
+
+36, no. 2, p. 101940, 2024. https:// doi. org/ 10. 1016/j. jksuci. 2023. 
+101940
+
+ 18.  Huang W., Zeng R., Li Y., Hua Y., Liu L., Chen M., Hu J., "Iden-
+tification of Alzheimer’s disease and vascular dementia based on 
+a Deep Forest and near-infrared spectroscopy analysis method," 
+Spectrochimica Acta Part A: Molecular and Biomolecular Spec-
+troscopy, vol. 326, p. 125209, 2025. https:// doi. org/ 10. 1016/j. saa. 
+2023. 125209
+
+ 19.  Rezaee K., Zhu M., "Diagnose Alzheimer’s disease and mild 
+cognitive impairment using deep CascadeNet and handcrafted 
+features from EEG signals," Biomedical Signal Processing and 
+Control, vol. 99, p. 106895, 2025. https:// doi. org/ 10. 1016/j. bspc. 
+2023. 106895
+
+ 20.  Ayus I., Gupta D., "A novel hybrid ensemble based Alzheimer’s 
+identification system using deep learning technique," Biomedical 
+Signal Processing and Control, vol. 92, p. 106079, 2024. https:// 
+doi. org/ 10. 1016/j. bspc. 2023. 106079
+
+ 21.  Rani K.E.E., Baulkani S., "Alzheimer disease classification using 
+optimal clustering based pre-trained SqueezeNet model," Biomed-
+ical Signal Processing and Control, vol. 100, p. 107032, 2025. 
+https:// doi. org/ 10. 1016/j. bspc. 2024. 107032
+
+ 22.  Alp S., Akan T., Bhuiyan M.S., Disbrow E.A., Conrad S.A., 
+Vanchiere J.A., Bhuiyan M.A., "Joint transformer architecture in 
+brain 3D MRI classification: its application in Alzheimer’s disease 
+classification," Scientific Reports, vol. 14, no. 1, p. 8996, 2024. 
+https:// doi. org/ 10. 1038/ s41598- 024- 55057-9
+
+ 23.  Kaggle, "Alzheimer's multiclass dataset - equal and augmented," 
+2024. https:// www. kaggle. com/ datas  ets/ aryan singh al10/ alzhe  
+imers- multi class- datas et- equal- and- augme nted
+
+ 24.  Vaswani A., et al., "Attention is all you need," arXiv preprint 
+arXiv: 1706. 03762, Aug. 2023. https:// doi. org/ 10. 48550/ arXiv.  
+1706. 03762
+
+ 25.  Dosovitskiy A., et al., "An image is worth 16x16 words: Trans-
+formers for image recognition at scale," arXiv preprint arXiv: 
+2010. 11929,  Jun.  2021. https:// doi. org/ 10. 48550/ arXiv. 2010.  
+11929
+
+ 26.  Touvron H., Cord M., Douze M., Massa F., Sablayrolles A., Jégou 
+H., "Training data-efficient image transformers & distillation 
+through attention," arXiv preprint  arXiv:2012.12877 , Jan. 2021. 
+https:// doi. org/ 10. 48550/ arXiv. 2012. 12877
+
+ 27.  Liu J., et al., "A new application of Elasticnet regression based 
+near-infrared spectroscopy model: Prediction and analysis of 
+2,3,5,4′-tetrahydroxy stilbene-2-O-β-D-glucoside and moisture 
+in Polygonum multiflorum," Microchemical Journal, vol. 199, p. 
+110095, Apr. 2024. https:// doi. org/ 10. 1016/j. microc. 2024. 110095
+ 28.  Ding Z., Liu H., Demartino C., Feng M., Sun Z., "Neighborhood 
+component analysis-based feature selection in machine learning 
+to predict tendon ultimate stress of unbonded prestressed con-
+crete beams," Case Studies in Construction Materials, vol. 21, p. 
+e03428, Jun. 2024. https:// doi. org/ 10. 1016/j. cscm. 2024. e03428
+
+ 29.  Agrawal A.K., Chakraborty G., "Neighborhood component analy-
+sis to leverage the class label information during feature selection 
+to enhance the damage classification performance," Structures, 
+vol. 57, p. 105174, Sep. 2023. https:// doi. org/ 10. 1016/j. istruc.  
+2023. 105174
+
+ 30.  Tuncer T., Aydemir E., Ozyurt F., Dogan S., "A deep feature 
+warehouse and iterative MRMR based handwritten signature 
+verification method," Multimedia Tools and Applications, vol. 
+81, no. 3, pp. 3899–3913, Nov. 2021. https:// doi. org/ 10. 1007/  
+s11042- 021- 11726-x
+
+ 31.  Ihianle I.K., Machado P., Owa K., Adama D.A., Otuka R., Lotfi 
+A., "Minimising redundancy, maximising relevance: HRV feature 
+selection for stress classification," Expert Systems With Applica-
+tions, vol. 239, p. 122490, Nov. 2023. https:// doi. org/ 10. 1016/j. 
+eswa. 2023. 122490
+
+ 
+Journal of Imaging Informatics in Medicine 
+
+ 32.  Aydemir  E.,  Al-azzawi  M.S.H.,  "Yerel  faz  niceleme  ile  ayak 
+görüntülerinin kişi, yaş ve cinsiyete göre sınıflandırılması," Niğde 
+Ömer Halisdemir Üniversitesi Mühendislik Bilimleri Dergisi, vol. 
+11, no. 3, Art. no. 3, Jul. 2022. https:// doi. org/ 10. 28948/ ngumuh. 
+10551 99
+
+ 33.  Breiman L., "Random forests," Machine Learning, vol. 45, no. 1, 
+pp. 5–32, Jan. 2001. https:// doi. org/ 10. 1023/a: 10109 33404 324
+ 34.  Shen Y., Wu S., Wang Y., Wang J., Yang Z., "Interpretable model 
+for rockburst intensity prediction based on Shapley values-based 
+Optuna-random forest," Underground Space, Oct. 2024. https:// 
+doi. org/ 10. 1016/j. undsp. 2024. 09. 002
+
+ 35.  Akselrud C.I.A., "Random forest regression models in ecology: 
+Accounting for messy biological data and producing predictions 
+with uncertainty," Fisheries Research, vol. 280, p. 107161, Sep. 
+2024. https:// doi. org/ 10. 1016/j. fishr es. 2024. 107161
+
+ 36.  Bolorunduro J.O., Zou Z., "Multi-layer stochastic block interac-
+tion driven by logistic regression (MLSBI-LR) for efficient link 
+recommendation in intra-layer linkage graphs," Information Sci-
+ences, vol. 647, p. 119476, Aug. 2023. https:// doi. org/ 10. 1016/j. 
+ins. 2023. 119476
+
+ 37.  Ghosh  A.,  Dey  P.,  "Flood  severity  assessment  of  the  coastal 
+tract situated between Muriganga and Saptamukhi estuaries of 
+Sundarban delta of India using frequency ratio (FR), fuzzy logic 
+(FL), logistic regression (LR) and random forest (RF) models," 
+Regional Studies in Marine Science, vol. 42, p. 101624, Jan. 2021. 
+https:// doi. org/ 10. 1016/j. rsma. 2021. 101624
+
+ 38.  Zhang K., Shen Y., "Interface capturing schemes based on sig-
+moid functions," Computers & Fluids, vol. 280, p. 106352, Jun. 
+2024. https:// doi. org/ 10. 1016/j. compfl uid. 2024. 106352
+
+ 39.  Wu Z., et al., "Integration of geographic features and bathymetric 
+inversion in the Yangtze River’s Nantong Channel using gradient 
+boosting machine algorithm with ZY-1E satellite and multibeam 
+data," Geomatica, p. 100027, Sep. 2024. https:// doi. org/ 10. 1016/j. 
+geomat. 2024. 100027
+
+ 40.  Bentéjac C., Csörgő A., Martínez-Muñoz G., "A comparative 
+analysis of gradient boosting algorithms," Artificial Intelligence 
+Review, vol. 54, no. 3, pp. 1937–1967, Aug. 2020. https:// doi. org/ 
+10. 1007/ s10462- 020- 09896-5
+
+ 41.  Ghorbani E., Yagiz S., "Estimating the penetration rate of tunnel 
+boring machines via gradient boosting algorithms," Engineering 
+Applications of Artificial Intelligence, vol. 136, p. 108985, Jul. 
+2024. https:// doi. org/ 10. 1016/j. engap pai. 2024. 108985
+
+ 42.  Lu Y.-H., Lin Y.-C., "The determinants of voluntary disclosure: 
+Integration of eXtreme gradient boost (XGBoost) and explainable 
+artificial intelligence (XAI) techniques," International Review 
+of Financial Analysis, p. 103577, Sep. 2024. https:// doi. org/ 10. 
+1016/j. irfa. 2024. 103577
+
+ 43.  Tao H., et al., "Coupled extreme gradient boosting algorithm with 
+artificial intelligence models for predicting compressive strength 
+of  fiber  reinforced  polymer-confined  concrete," Engineering 
+Applications of Artificial Intelligence, vol. 134, p. 108674, Jun. 
+2024. https:// doi. org/ 10. 1016/j. engap pai. 2024. 108674
+
+ 44.  Kaysi F., Aydemir E., Surucu Y.I., "Classification of university 
+students' live session watching status using the artificial intel-
+ligence," International Online Journal of Educational Sciences, 
+vol. 13, no. 4, pp. 682–700, 2023. https:// doi. org/ 10. 15345/ iojes. 
+2023. 04. 013
+
+Publisher's  Note  Springer  Nature  remains  neutral  with  regard  to 
+jurisdictional claims in published maps and institutional affiliations.
+
+Springer Nature or its licensor (e.g. a society or other partner) holds 
+exclusive rights to this article under a publishing agreement with the 
+author(s) or other rightsholder(s); author self-archiving of the accepted 
+manuscript version of this article is solely governed by the terms of 
+such publishing agreement and applicable law.
+
+

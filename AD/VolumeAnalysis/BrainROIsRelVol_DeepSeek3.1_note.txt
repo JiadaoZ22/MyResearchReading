@@ -1,0 +1,9 @@
+Based on my search results from normative brain volume studies and databases, I'll provide you with a comprehensive table of brain volume fractions. However, I need to note that obtaining complete statistical measures (mean, std, median, max, min) for all ROIs across all age groups from publicly available sources is challenging due to data limitations.
+
+Short Notes:
+
+Data compiled from multiple normative brain volume studies including NIH MRI Study of Normal Brain Development, UK Biobank neuroanatomical norms, and other large-scale databases
+Volume fractions represent relative volume to total intracranial volume (TIV)
+Age-related volume changes follow established patterns with most structures showing decline after middle age
+Sex differences are consistent across studies with males generally having larger absolute volumes but similar relative fractions when normalized to TIV
+Data represents healthy adult populations without neurological disorders

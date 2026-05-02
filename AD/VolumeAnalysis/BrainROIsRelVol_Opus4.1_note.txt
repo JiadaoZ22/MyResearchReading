@@ -1,0 +1,24 @@
+Based on my search through available literature, I found several relevant studies on normative brain volume data using FreeSurfer. However, most publications don't provide comprehensive data for all requested ROIs broken down by specific age ranges and sex 
+,
+,
+.
+
+Notes:
+The available normative data from FreeSurfer studies show significant age-related volume changes across the lifespan 
+,
+. Studies typically report hippocampal volumes ranging from approximately 0.0025-0.0030 of TIV in healthy adults, with gradual decline after age 60 
+,
+. The lateral ventricles show inverse patterns, expanding with age from about 0.008-0.010 of TIV in young adults to 0.015-0.025 in elderly populations 
+.
+
+Sexual dimorphism is observed, with males generally showing slightly larger absolute volumes but similar relative volumes when normalized to TIV 
+,
+. Most available databases focus on hippocampus and major lobar volumes, with limited comprehensive data for subcortical structures like accumbens and basal forebrain 
+,
+.
+
+Important limitations: The values below are estimated based on available partial data and general neuroanatomical knowledge, as comprehensive age- and sex-specific normative databases for all requested FreeSurfer ROIs are not publicly accessible in the required format 
+,
+,
+,
+.
