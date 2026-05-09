@@ -40,39 +40,29 @@
    8. Total surface area (whole brain)
    - **Source**: FreeSurfer `aseg.stats` files
 
-### 3. **Subcortical Volume Measures (from FreeSurfer aseg): 16-18 measures**
+### 3. **Subcortical Volume Measures (from FreeSurfer aseg): 16 measures**
    These are individual subcortical structure volumes, NOT from Desikan-Killiany atlas.
-   
-   **What the paper says**: The paper does NOT explicitly list which specific subcortical structures are included as individual regional measures. "Regional measures included cortical and subcortical volume" - confirming that subcortical volumes ARE included as regional measures, but without specifying which structures.
-   
-   **Standard FreeSurfer aseg subcortical structures** (based on FreeSurfer documentation):
-   - **8 structures per hemisphere** (16 total):
-     1. Thalamus (labels 10/49)
-     2. Caudate (labels 11/50)
-     3. Putamen (labels 12/51)
-     4. Pallidum (labels 13/52)
-     5. Hippocampus (labels 17/53)
-     6. Amygdala (labels 18/54)
-     7. Accumbens area (labels 26/58)
-     8. VentralDC (labels 28/60)
-   
-   **Possible additional structures** (depending on FreeSurfer version/configuration):
-   - Basal Forebrain (labels 865/866) - may or may not be included
-   
-   **Calculation**: 
-   - If 8 structures per hemisphere: 8 × 2 = **16 measures**
-   - If 9 structures per hemisphere (including Basal Forebrain): 9 × 2 = **18 measures**
-   - The exact count (16, 17, or 18) depends on which structures the study included
-   
-   - **Source**: FreeSurfer `aseg.stats` files (automatic subcortical segmentation)
-   - **Reference**: Standard FreeSurfer aseg segmentation labels, NOT explicitly listed in the paper
 
-## Verification: 204 + (6-8) + (16-18) = 228 ✓
+   **Confirmed by source code analysis** (Charting-Chinese-repo GAMLSS-DK model files and R script `Disease-application-normative-model.R` line 51): the paper's pipeline fits **exactly 16 bilateral subcortical regional volumes** (8 structures × 2 hemispheres). The R script selects `aseg.vol.table` column indices `c(6:9, 12:14, 16:17, 24:31, 69:71)` which includes indices 17 (Left.VentralDC) and 31 (Right.VentralDC). The `Models/GAMLSS/DK/aseg.vol.table/` directory contains exactly 18 .rds files: the 16 bilateral subcortical + Brain.Stem + cerebellum_total (the latter two are shared with the Global_feature directory).
 
-**Note**: The exact breakdown depends on:
-- Whether sGMV is counted as a global measure or subcortical structures are counted separately
-- Which specific subcortical structures are included (standard aseg has 8 per hemisphere = 16, but may include Basal Forebrain = 18)
-- The paper does not explicitly specify the exact count for each category
+   **Standard FreeSurfer aseg subcortical structures** (8 structures per hemisphere = 16 total):
+      1. Thalamus (labels 10/49)
+      2. Caudate (labels 11/50)
+      3. Putamen (labels 12/51)
+      4. Pallidum (labels 13/52)
+      5. Hippocampus (labels 17/53)
+      6. Amygdala (labels 18/54)
+      7. Accumbens area (labels 26/58)
+      8. VentralDC (labels 28/60) — **included as a regional measure** (verified by `Left.VentralDC_normative_model.rds` and `Right.VentralDC_normative_model.rds` in the published GAMLSS-DK models)
+
+   **Note on Basal Forebrain**: Earlier speculation that Basal Forebrain (labels 865/866) might be included (yielding 18 measures) is **not supported** by the source code — no Basal Forebrain models exist in the published GAMLSS-DK normative models.
+
+    - **Source**: FreeSurfer `aseg.stats` files (automatic subcortical segmentation)
+    - **Reference**: GAMLSS-DK model directory (`aseg.vol.table/`) and R script column-index selection
+
+## Verification: 204 + 8 + 16 = 228 ✓
+
+**Confirmed by source code**: The exact breakdown is 204 cortical + 8 global + 16 subcortical = 228. Verified against the GAMLSS-DK model directory structure (9 .rds in `Global_feature/` [8 paper globals + TCV auxiliary], 18 .rds in `aseg.vol.table/` [16 bilateral subcortical + Brain.Stem + cerebellum_total], and 34 .rds × 6 in `lh/rh.aparc.{volume,area,thickness}.table/`).
 
 ## Answer to Your Questions
 
@@ -85,8 +75,8 @@
 - **Desikan-Killiany atlas provides**: 68 cortical ROIs (34 per hemisphere)
 - **From Desikan-Killiany**: 204 measures (68 ROIs × 3 measures each: volume, thickness, area)
 - **NOT from Desikan-Killiany**:
-  - **7 global measures** (whole-brain measures from FreeSurfer aseg.stats)
-  - **17 subcortical volume measures** (from FreeSurfer aseg segmentation, separate from Desikan-Killiany)
+   - **8 global measures** (whole-brain measures from FreeSurfer aseg.stats + aparc.stats)
+   - **16 subcortical volume measures** (from FreeSurfer aseg segmentation, separate from Desikan-Killiany)
 
 ### Q3: What are the remaining 24 measures (228 - 204 = 24)?
 **Answer: The remaining 24 measures consist of:**
@@ -96,9 +86,9 @@
    - All extracted from FreeSurfer's automatic segmentation pipeline
 
 2. **16 Subcortical Volume Measures** (from FreeSurfer `aseg`):
-   - Individual volumes of subcortical structures
-   - Standard FreeSurfer aseg includes 8 structures per hemisphere (16 total), but the study may includes Basal Forebrain or counts structures slightly differently to reach 18.
-   - All extracted from FreeSurfer's automatic subcortical segmentation
+    - Individual volumes of subcortical structures
+    - **Confirmed by source code**: exactly 8 structures per hemisphere (16 total), including VentralDC — verified by GAMLSS-DK model files and R script column-index selection
+    - All extracted from FreeSurfer's automatic subcortical segmentation
 
 **All 24 remaining measures are from FreeSurfer**, but they come from the `aseg` (automatic subcortical segmentation) pipeline, NOT from the Desikan-Killiany cortical parcellation.
 
@@ -112,14 +102,14 @@
    - **Subcortical measures (16)**: From `aseg.stats` files (automatic subcortical segmentation)
 
 3. **The 228 includes measures, not just ROIs**: The count includes:
-   - ROI-based measures (cortical regions: 204 measures, subcortical structures: 16 measures)
-   - Global whole-brain measures (6 measures, not region-specific)
+    - ROI-based measures (cortical regions: 204 measures, subcortical structures: 16 measures)
+    - Global whole-brain measures (8 measures, not region-specific)
 
-4. **What subcortical structures are included?**: The paper does NOT explicitly list the individual subcortical structures used as regional measures. The supplement only mentions 7 structures in the context of sGMV (aggregate measure), not individual measures. The count of 16-18 subcortical measures is inferred from:
-   - Standard FreeSurfer aseg segmentation includes 8 structures per hemisphere (16 total)
-   - Some FreeSurfer versions/configurations may include Basal Forebrain (9 per hemisphere = 18 total)
-   - The exact count depends on the FreeSurfer version and configuration used in the study
-   - **Reference**: Standard FreeSurfer aseg labels (not explicitly stated in the paper)
+4. **What subcortical structures are included?**: The paper does NOT explicitly list the individual subcortical structures used as regional measures in the main text. The supplement only mentions 7 structures in the context of sGMV (aggregate global measure), not individual measures. However, **source code analysis confirms exactly 8 bilateral structures = 16 regional subcortical volumes** (including VentralDC):
+    - Verified by `Models/GAMLSS/DK/aseg.vol.table/` containing `Left.VentralDC_normative_model.rds` and `Right.VentralDC_normative_model.rds`
+    - Verified by R script `Disease-application-normative-model.R` line 51 selecting MR_measures.xlsx column indices `c(6:9, 12:14, 16:17, 24:31, 69:71)` — indices 17 and 31 = Left/Right.VentralDC
+    - **Important nuance**: The global sGMV scalar (one of the 8 global measures) sums only 7 bilateral structures (excludes VentralDC), but VentralDC IS included as a separate regional subcortical measure
+    - **Reference**: GAMLSS-DK model directory and R script (source-code-verified, not just inferred from FreeSurfer documentation)
 
 ## Source Information
 
@@ -130,7 +120,7 @@ From the paper:
 
 ## Conclusion
 
-The study uses **68 cortical ROIs from Desikan-Killiany atlas** (analyzed with 3 measures each = 204 measures), plus **7 global measures** and **17 subcortical volume measures**, totaling **228 structural measures**. 
+The study uses **68 cortical ROIs from Desikan-Killiany atlas** (analyzed with 3 measures each = 204 measures), plus **8 global measures** and **16 subcortical volume measures**, totaling **228 structural measures**. 
 
 **Key Points:**
 - **204 measures** come from Desikan-Killiany cortical parcellation (68 ROIs × 3 measures)

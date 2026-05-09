@@ -42,7 +42,7 @@ The paper uses **two FreeSurfer-derived parcellation/segmentation schemes** to o
   - Subcortical structures and whole‑brain summaries are produced during `recon-all` and reported in **`aseg.stats`** (and the volume `aseg.mgz` / `aparc+aseg.mgz`).
 - **Typical subcortical structures (aseg):**  
   - 8 per hemisphere (16 total): Thalamus, Caudate, Putamen, Pallidum, Hippocampus, Amygdala, Accumbens area, Ventral DC.  
-  - Some FreeSurfer versions also include Basal Forebrain (e.g. 18 structures total). The paper does not list the exact set; the count (16–18) is inferred from standard aseg.
+  - **Source code analysis confirms exactly 16** (verified by GAMLSS-DK model files in `Models/GAMLSS/DK/aseg.vol.table/` containing 18 .rds = 16 bilateral subcortical + Brain.Stem + cerebellum_total, and R script `Disease-application-normative-model.R` line 51 selecting indices 17 and 31 for Left/Right.VentralDC). Earlier uncertainty about "16–18" (from possible Basal Forebrain) is not supported by the source code — no Basal Forebrain models exist.
 - **Global measures (from aseg / recon-all):**  
   - e.g. total cortical gray matter volume, total cerebral white matter volume, subcortical gray matter volume (sGMV), ventricular volume, cerebellar volume, brainstem volume, mean cortical thickness, total surface area (see `Study_ROI-measurement.md` for the list used in your 228-measure breakdown).
 
@@ -66,7 +66,7 @@ The paper uses **two FreeSurfer-derived parcellation/segmentation schemes** to o
 | **FreeSurfer aseg**               | Subcortical + whole‑brain | 8 global + 16 subcortical volumes | 24 |
 | **Total**                         | —    | —                  | **228** |
 
-For exact lists of the 8 global and 16 (or 18) subcortical structures, see **`Study_ROI-measurement.md`** in this folder.
+For exact lists of the 8 global and 16 subcortical structures (source-code-verified), see **`Study_ROI-measurement.md`** in this folder.
 
 ---
 

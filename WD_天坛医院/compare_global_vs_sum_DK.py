@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Compare FreeSurfer 8-global vs sum of 68 DK ROIs (cortical volume only).
+Compare FreeSurfer 8 global measures vs sum of 68 DK ROIs (cortical volume only).
 
 - Global: CortexVol from stats/aseg.stats (total cortical gray matter).
 - Sum of DK: sum of GrayVol from stats/lh.aparc.stats + stats/rh.aparc.stats (68 regions).
